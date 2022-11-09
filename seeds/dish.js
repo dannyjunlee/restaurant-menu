@@ -34,79 +34,43 @@ const dishdata = [
   {
     dish_type: 'Appetizer',
     dish_name: 'Snap Peas w/Dipping Sauce',
-    dish_description: 'Farm-fresh snap peas in their Metapods and a Sunflora seed butter-based creamy sauce',
+    dish_description: 'Farm-fresh snap peas in their Metapods and a Sunflora Seedot butter-based creamy sauce',
     dish_price: 5.00
   },
   {
     dish_type: 'Entree',
-    dish_name: 'Sample Dish 3',
-    dish_description: 'Sample Description 3',
+    dish_name: 'The Eevee',
+    dish_description: 'Thick burger with lettuce and tomato with your choice of sauce - Vaporeon for cool mint chutney, Jolteon for tangy lemon dressing, or Flareon for sriracha barbecue sauce',
     dish_price: 15.00
   },
   {
     dish_type: 'Entree',
-    dish_name: 'Sample Dish 3',
-    dish_description: 'Sample Description 3',
+    dish_name: 'The Dugtrio',
+    dish_description: '3 corn tortilla tacos with your choice of fillings',
     dish_price: 15.00
   },
   {
     dish_type: 'Entree',
-    dish_name: 'Sample Dish 3',
-    dish_description: 'Sample Description 3',
+    dish_name: 'The Charmander',
+    dish_description: 'Char-grilled jalapenos top this spicy Thai red curry',
     dish_price: 15.00
   },
   {
     dish_type: 'Entree',
-    dish_name: 'Sample Dish 3',
-    dish_description: 'Sample Description 3',
+    dish_name: 'The Moltres',
+    dish_description: 'Pizza with customized toppings - (gluten-free crust available)',
     dish_price: 15.00
   },
   {
     dish_type: 'Entree',
-    dish_name: 'Sample Dish 3',
-    dish_description: 'Sample Description 3',
-    dish_price: 15.00
-  },
-  {
-    dish_type: 'Entree',
-    dish_name: 'Sample Dish 3',
-    dish_description: 'Sample Description 3',
-    dish_price: 15.00
-  },
-  {
-    dish_type: 'Entree',
-    dish_name: 'Sample Dish 3',
-    dish_description: 'Sample Description 3',
-    dish_price: 15.00
-  },
-  {
-    dish_type: 'Entree',
-    dish_name: 'Sample Dish 3',
-    dish_description: 'Sample Description 3',
-    dish_price: 15.00
-  },
-  {
-    dish_type: 'Entree',
-    dish_name: 'Sample Dish 3',
-    dish_description: 'Sample Description 3',
-    dish_price: 15.00
-  },
-  {
-    dish_type: 'Entree',
-    dish_name: 'Sample Dish 3',
-    dish_description: 'Sample Description 3',
+    dish_name: 'The Rattata',
+    dish_description: 'Scrumptious ratatouille with fresh minced garlic',
     dish_price: 15.00
   },
   {
     dish_type: 'Dessert',
-    dish_name: 'Sample Dish 4',
-    dish_description: 'Sample Description 4',
-    dish_price: 10.00
-  },
-  {
-    dish_type: 'Dessert',
-    dish_name: 'Sample Dish 4',
-    dish_description: 'Sample Description 4',
+    dish_name: 'Masrsh-Marill Pudding',
+    dish_description: 'Flaaffy, spongey, and Drizzile-d with Goomy caramel',
     dish_price: 10.00
   },
   {

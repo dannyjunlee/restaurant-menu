@@ -11,16 +11,20 @@ Menu.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    dishName: {
-      type: DataTypes.STRING,
-      allowNull: false,
+    dish_type: {
+        type: DataTypes.STRING,
+        allowNull: false,
     },
-    dish_price: {
-      type: DataTypes.DECIMAL,
+    dish_name: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
     dish_description: {
-      type: DataTypes.STRING,
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+    dish_price: {
+      type: DataTypes.DECIMAL,
       allowNull: false,
     },
   },

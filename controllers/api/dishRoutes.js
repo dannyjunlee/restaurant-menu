@@ -39,3 +39,5 @@ router.get('/:dish_type', async (req, res) => {
         res.status(500).json(err);
     }
 })
+
+module.exports = router;

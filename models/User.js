@@ -45,6 +45,10 @@ User.init(
     favorites: {
         type: DataTypes.INTEGER,
         allowNull: true,
+        references: {
+          model: 'dish',
+          key: 'id',
+        },
     },
   },
   {

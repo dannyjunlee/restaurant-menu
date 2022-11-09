@@ -43,7 +43,7 @@ User.init(
         },
     },
     favorites: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: true,
     },
   },

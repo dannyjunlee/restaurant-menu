@@ -51,9 +51,9 @@ The future of this app includes but is not limited to incorporation of multiple 
 
 [Igor-Korman](https://github.com/ikorman12)  
 [Daniel-Jun-Lee](https://github.com/dannyjunlee)  
-[Daniel-Keller]()  
-[Kevin-Chen]()  
-[Jackson-Impellizeri]()
+[Daniel-Keller](https://github.com/DBanfieldKeller)  
+[Kevin-Chen](https://github.com/realkevinC)  
+[Jackson-Impellizeri](https://github.com/jaxpi)
 
 ## Contact
 Feel Free to contact us through our github links above..

@@ -1,6 +1,6 @@
 const sequelize = require('../config/connection');
 const seedMenu = require('./menu');
-const seedReview = require('./review');
+const seedReview = require('./reviewData');
 
 const seedAll = async () => {
     await sequelize.sync({ force: true});

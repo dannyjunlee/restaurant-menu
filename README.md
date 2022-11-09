@@ -35,7 +35,7 @@
  ## Deployment
 
  -[Github](https://github.com/dannyjunlee/restaurant-menu)  
- -[Live]()  
+ -[Live](https://xyz-restaurant.herokuapp.com/)  
  -[Video-Tutorial]()  
 
 ## Screenshots

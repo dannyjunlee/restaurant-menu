@@ -61,7 +61,7 @@ User.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'menu',
+    modelName: 'user',
   }
 );
 

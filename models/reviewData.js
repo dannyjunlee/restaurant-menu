@@ -31,7 +31,7 @@ Review.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'menu',
+        model: 'dish',
         key: 'id',
       },
     },
@@ -40,7 +40,7 @@ Review.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'menu',
+    modelName: 'review',
   }
 );
 

@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Menu extends Model {}
+class Review extends Model {}
 
-Menu.init(
+Review.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,29 +11,37 @@ Menu.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    dish_type: {
+    comments: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
-    dish_name: {
-      type: DataTypes.STRING,
+    score: {
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
-    dish_description: {
-        type: DataTypes.STRING,
+    user_id: {
+        type: DataTypes.INTEGER,
         allowNull: false,
+        references: {
+            model: 'user',
+            key: 'id',
+          },
       },
-    dish_price: {
-      type: DataTypes.DECIMAL,
+    dish_id: {
+      type: DataTypes.INTEGER,
       allowNull: false,
+      references: {
+        model: 'dish',
+        key: 'id',
+      },
     },
   },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'menu',
+    modelName: 'review',
   }
 );
 
-module.exports = Menu;
+module.exports = Review;

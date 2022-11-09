@@ -1,6 +1,6 @@
-const { Menu } = require('../models');
+const { Dish } = require('../models');
 
-const menudata = [
+const dishdata = [
   {
     dish_type: 'Appetizer',
     dish_name: 'Sample Dish 1',
@@ -27,6 +27,6 @@ const menudata = [
   },
 ];
 
-const seedMenu = () => Menu.bulkCreate(menudata);
+const seedDish = () => Dish.bulkCreate(dishdata);
 
-module.exports = seedMenu;
+module.exports = seedDish;

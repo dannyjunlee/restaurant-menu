@@ -21,7 +21,7 @@ router.get('/', async (req, res) => {
 
 router.get('/:dish_type', async (req, res) => {
     try {
-        const dishData = await Menu.findAll({
+        const dishData = await Dish.findAll({
             where: {
                 dish_type: req.params.dish_type
             },

@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection');
-const seedMenu = require('./menu');
+const seedDish = require('./dish');
 const seedReview = require('./reviewData');
 
 const seedAll = async () => {

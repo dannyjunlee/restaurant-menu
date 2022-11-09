@@ -4,7 +4,7 @@ const seedReview = require('./reviewData');
 
 const seedAll = async () => {
     await sequelize.sync({ force: true});
-    await seedMenu();
+    await seedDish();
     await seedReview();
     process.exit(0)
 };

@@ -24,8 +24,7 @@ router.post('/', async (req, res) => {
             password: req.body.password,
             phone: req.body.phone,
             address: req.body.address,
-            // TODO: figure out credit card validation
-            // creditcard: req.body.creditcard,
+            creditcard: req.body.creditcard,
         });
 
         req.session.save(() => {
@@ -64,5 +63,27 @@ router.put('/:id', async (req, res) => {
         res.status(500).json(err);
     }
 })
+
+// delete route
+
+router.delete('/:id', async (req, res) => {
+    try {
+      const userData = await User.destroy({
+        where: {
+          id: req.params.id,
+        },
+      });
+  
+      if (!userData) {
+        res.status(404).json({ message: 'No user found with this id!' });
+        return;
+      }
+  
+      res.status(200).json(userData);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
 
 module.exports = router;

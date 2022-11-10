@@ -81,4 +81,25 @@ router.put('/:id', async (req, res) => {
     }
 })
 
+// delete dish route
+router.delete('/:id', async (req, res) => {
+    try {
+      const dishData = await Dish.destroy({
+        where: {
+          id: req.params.id,
+        },
+      });
+  
+      if (!dishData) {
+        res.status(404).json({ message: 'No dish found with this id!' });
+        return;
+      }
+  
+      res.status(200).json(dishData);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
+
 module.exports = router;

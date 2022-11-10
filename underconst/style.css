@@ -10,8 +10,13 @@ body {
     padding-top: 20px;
     background-color: black;
 }
+
 header {
     text-align: center;
+}
+
+header:hover {
+    filter: drop-shadow(5px 5px 5px gray);
 }
 
 h2 {
@@ -30,18 +35,17 @@ h2:hover {
 }
 
 .menu {
-    border: 2px solid red;
     display: flex;
     flex-direction: column;
-    margin: 40px;
+    margin-left: 60px;
+    margin-right: 60px;
 }
 
 #appetizers {
-    border: 2px solid red;
     margin: 20px;
     color: black;
-    border: 5px solid black;
-    box-shadow: 5px 5px 5px;
+    border: 5px solid red;
+    box-shadow: 5px 5px 5px gray;
     padding: 10px;
     background: white;
 }
@@ -53,11 +57,10 @@ h2:hover {
 }
 
 #entrees {
-    border: 2px solid red;
     margin: 20px;
     color: black;
-    border: 5px solid black;
-    box-shadow: 5px 5px 5px;
+    border: 5px solid red;
+    box-shadow: 5px 5px 5px gray;
     padding: 10px;
     background: white;
 }
@@ -69,16 +72,30 @@ h2:hover {
 }
 
 #desserts {
-    border: 2px solid red;
     margin: 20px;
     color: black;
-    border: 5px solid black;
-    box-shadow: 5px 5px 5px;
+    border: 5px solid red;
+    box-shadow: 5px 5px 5px gray;
     padding: 10px;
     background: white;
 }
 
 #desserts ul {
+    list-style: none;
+    text-align: left;
+    text-indent: 5%;
+}
+
+#drinks {
+    margin: 20px;
+    color: black;
+    border: 5px solid red;
+    box-shadow: 5px 5px 5px gray;
+    padding: 10px;
+    background: white;
+}
+
+#drinks ul {
     list-style: none;
     text-align: left;
     text-indent: 5%;

@@ -7,15 +7,31 @@
 
 body {
     position: relative;
-    padding-top: 50px;
+    padding-top: 20px;
     background-color: black;
 }
 header {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    /* margin: 20px auto; */
     text-align: center;
-    font-size: 32px;
-    color: black;
-    font-weight: bold;
+}
+
+.menu {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+}
+
+#appetizers {
+    border: 2px solid red;
+}
+
+#entrees {
+    border: 2px solid red;
+}
+
+#desserts {
+    border: 2px solid red;
+}
+
+#drinks {
+    border: 2px solid red;
 }

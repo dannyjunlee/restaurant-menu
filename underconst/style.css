@@ -14,24 +14,55 @@ header {
     text-align: center;
 }
 
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 32px;
+    color: black;
+    font-weight: bold;
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+h2:hover {
+    transform: scale(110%);
+    filter: drop-shadow(5px 5px 5px black);
+}
+
 .menu {
     border: 2px solid red;
     display: flex;
     flex-direction: column;
+    margin: 40px;
 }
 
 #appetizers {
     border: 2px solid red;
+    margin: 20px;
+    color: black;
+    border: 5px solid black;
+    box-shadow: 5px 5px 5px;
+    padding: 10px;
+    background: white;
+}
+
+#appetizers ul {
+    list-style: none;
+    text-align: left;
+    text-indent: 5%;
 }
 
 #entrees {
     border: 2px solid red;
+    margin: 20px;
 }
 
 #desserts {
     border: 2px solid red;
+    margin: 20px;
 }
 
 #drinks {
     border: 2px solid red;
+    margin: 20px;
 }

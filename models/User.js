@@ -17,7 +17,7 @@ User.init(
         allowNull: false,
     },
     password: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     email: {
@@ -28,7 +28,7 @@ User.init(
         },
       },
     phone: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: true,
     },
     address: {
@@ -36,7 +36,7 @@ User.init(
         allowNull: true,
     },
     creditcard: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: true,
         validate: {
             isCreditCard: true,

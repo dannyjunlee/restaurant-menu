@@ -38,6 +38,31 @@ router.get('/:dish_type', async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
+});
+
+// update dish
+router.put('/:id', async (req, res) => {
+    try {
+        const updatedDish = await Dish.update(
+            {
+                dish_type: req.body.dish_type,
+                dish_name: req.body.dish_name,
+                dish_description: req.body.dish_description,
+                dish_price: req.body.dish_price,
+            },
+            {
+                where: {
+                    id: req.params.id,
+                },
+            });
+
+        if (!updatedDish) {
+            res.status(404).json({ message: 'No dish found with this id' });
+        }
+        res.status(200).json(updatedDish);
+    } catch (err) {
+        res.status(500).json(err);
+    }
 })
 
 module.exports = router;

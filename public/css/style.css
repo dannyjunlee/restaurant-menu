@@ -18,11 +18,9 @@ body {
     flex-direction: column;
 }
 
-/* main{
-    display: flex;
-    justify-content: center;
-    align-content: space-between;
-} */
+nav {
+    margin-left: 30px;
+}
 
 main div {
     border-radius: 5px;
@@ -38,7 +36,7 @@ main div {
 h2 {
     margin: 2px;
     text-align: center;
-    text-decoration: bold underline;
+    text-decoration:underline;
 }
 
 #header {
@@ -48,4 +46,8 @@ h2 {
     font-size: 50px;
 }
 
-#appetizers {}
+
+footer{
+    color: var(--white);
+    text-align: center;
+}

@@ -1,4 +1,4 @@
-# Xcaliber
+<!-- # Xcaliber
 
 ## Table of contents
 *[Introduction](#introduction)  
@@ -59,4 +59,4 @@ The future of this app includes but is not limited to incorporation of multiple 
 Feel Free to contact us through our github links above..
 
 ## License
-N/A
+N/A -->

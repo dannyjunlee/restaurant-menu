@@ -40,6 +40,22 @@ router.get('/:dish_type', async (req, res) => {
     }
 });
 
+// create new dish
+router.post('/', async (req, res) => {
+    try {
+        const newDish = await Dish.create({
+            dish_type: req.body.dish_type,
+            dish_name: req.body.dish_name,
+            dish_description: req.body.dish_description,
+            dish_price: req.body.dish_price,
+        });
+
+        res.status(200).json(newDish)
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
+
 // update dish
 router.put('/:id', async (req, res) => {
     try {

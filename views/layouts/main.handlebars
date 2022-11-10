@@ -10,7 +10,7 @@
 
 <body>
   <header>
-    <h1>Lucarios</h1>
+    <h1 id="header">Lucarios</h1>
   </header>
   <nav>
     <a href="/">Home</a>
@@ -21,22 +21,25 @@
     {{/if}}
   </nav>
   <main>
-    <div>
+    <div id="appetizers">
       <h2>Appetizers</h2>
     </div>
     {{!-- <div class="menu">
       {{{body}}}
     </div> --}}
-        <div>
+        <div id="entrees">
       <h2>Entrees</h2>
     </div>
-        <div>
+        <div id="deserts">
       <h2>Deserts</h2>
     </div>
-        <div>
-      <h2>Alcoholic beverages</h2>
+        <div id="drinks">
+      <h2 >Alcoholic beverages</h2>
     </div>
   </main>
+  <footer>
+    <h3>Made with care by group 4 ❤</h3>
+  </footer>
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>
   {{/if}}

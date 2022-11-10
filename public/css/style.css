@@ -5,6 +5,8 @@
 
 }
 
+
+
 body {
     display: flex;
     margin: 0px;
@@ -16,13 +18,34 @@ body {
     flex-direction: column;
 }
 
+/* main{
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+} */
+
 main div {
-    margin: 0px;
     border-radius: 5px;
-    border: 20px;
-    border-color: red;
-    width: 90%;
+    border: 2px solid var(--red);
     min-height: 200px;
     background-color: var(--white);
-    align-content: space-between;
+    /* align-content: space-between; */
+    margin-top: 20px;
+    margin-right: 25px;
+    margin-left: 25px;
 }
+
+h2 {
+    margin: 2px;
+    text-align: center;
+    text-decoration: bold underline;
+}
+
+#header {
+    color: var(--white);
+    text-align: center;
+    font-weight: 900;
+    font-size: 50px;
+}
+
+#appetizers {}

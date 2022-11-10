@@ -7,10 +7,13 @@
 
 * {
     margin: 0px;
-    padding:0px
-    box-sizing= border-box;
+    padding:0px;
+    box-sizing: border-box;
     background-color: var(--black); 
-    border: 1px var(--red)  
+    border: 1px var(--red);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;   
+
 }
 
 main div {

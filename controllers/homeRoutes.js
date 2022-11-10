@@ -22,14 +22,19 @@ router.get('/', async (req, res) => {
     };
 });
 
-// GET route for one dish
-router.get('/:id', async (req, res) => {
+// GET route for one category
+router.get('/:dish_type', async (req, res) => {
     try {
-        const dishData = await Dish.findByPk(req.params.id, {
+        const dishData = await Dish.findAll({
+            where: {
+                dish_type: req.params.dish_type
+            },
             include: [{ model: Review }]
         });
 
-        const dishes = dishData.get({ plain: true });
+        const dishes = dishData.map((dish) =>
+            dish.get({ plain: true })
+        );
 
         res.render('dish', {
             dishes,
@@ -48,5 +53,7 @@ router.get('/login', (req, res) => {
     }
     res.render('login');
 });
+
+// Signup route
 
 module.exports = router;

@@ -64,7 +64,7 @@ h2:hover {
 #appetizers ul {
     list-style: none;
     text-align: left;
-    text-indent: 5%;
+    padding-left: 50px;
 }
 
 #entrees {
@@ -79,8 +79,9 @@ h2:hover {
 #entrees ul {
     list-style: none;
     text-align: left;
-    text-indent: 5%;
+    padding-left: 50px;
 }
+
 
 #desserts {
     margin: 20px;
@@ -94,7 +95,7 @@ h2:hover {
 #desserts ul {
     list-style: none;
     text-align: left;
-    text-indent: 5%;
+    padding-left: 50px;
 }
 
 #drinks {
@@ -109,5 +110,11 @@ h2:hover {
 #drinks ul {
     list-style: none;
     text-align: left;
-    text-indent: 5%;
+    padding-left: 50px;
+}
+
+@media screen and (max-width: 1000px) {
+    #restinfo {
+        margin: 0;
+    }
 }

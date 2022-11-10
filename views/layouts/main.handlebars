@@ -4,14 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xcaliber</title>
-  <link rel="stylesheet" type="text/css" href="/css/jass.css">
+  <title>Lucarios</title>
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
 <body>
   <header>
-    <h1>We make food</h1>
+    <h1 id="header">Lucarios</h1>
   </header>
   <nav>
     <a href="/">Home</a>
@@ -22,13 +21,25 @@
     {{/if}}
   </nav>
   <main>
-    <aside>
-      <h2>Heres Our Menu!</h2>
-    </aside>
-    <div class="gallery">
+    <div id="appetizers">
+      <h2>Appetizers</h2>
+    </div>
+    {{!-- <div class="menu">
       {{{body}}}
+    </div> --}}
+        <div id="entrees">
+      <h2>Entrees</h2>
+    </div>
+        <div id="deserts">
+      <h2>Deserts</h2>
+    </div>
+        <div id="drinks">
+      <h2 >Alcoholic beverages</h2>
     </div>
   </main>
+  <footer>
+    <h3>Made with care by group 4 ❤</h3>
+  </footer>
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>
   {{/if}}

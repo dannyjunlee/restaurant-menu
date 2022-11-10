@@ -81,7 +81,7 @@ router.put('/:id', async (req, res) => {
     }
 })
 
-// delete dish route
+// delete dish
 router.delete('/:id', async (req, res) => {
     try {
       const dishData = await Dish.destroy({

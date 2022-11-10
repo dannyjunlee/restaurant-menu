@@ -64,7 +64,7 @@ router.put('/:id', async (req, res) => {
     }
 })
 
-// delete route
+// delete user
 
 router.delete('/:id', async (req, res) => {
     try {

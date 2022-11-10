@@ -55,14 +55,15 @@ h2:hover {
 #entrees {
     border: 2px solid red;
     margin: 20px;
+    color: black;
+    border: 5px solid black;
+    box-shadow: 5px 5px 5px;
+    padding: 10px;
+    background: white;
 }
 
-#desserts {
-    border: 2px solid red;
-    margin: 20px;
-}
-
-#drinks {
-    border: 2px solid red;
-    margin: 20px;
+#entrees ul {
+    list-style: none;
+    text-align: left;
+    text-indent: 5%;
 }

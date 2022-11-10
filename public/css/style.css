@@ -1,6 +1,15 @@
+:root {
+    --black: black;
+    --red: red;
+    --white: white;
+
+}
+
 *{
     margin: 0px;
     padding:0px
-    box-sizing= border-box;   
+    box-sizing= border-box;
+    background-color: var(--black);   
 }
+
 

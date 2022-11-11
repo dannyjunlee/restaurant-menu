@@ -29,4 +29,7 @@ Dish.belongsTo(User, {
     foreignKey: 'user_id',
 });
 
+Dish.belongsToMany(User, {through: 'UserDish'});
+User.belongsToMany(Dish, {through: 'UserDish'});
+
 module.exports = { User, Dish, Review };

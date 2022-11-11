@@ -19,7 +19,12 @@ router.get('/fetchproducts/:check', function (req, res) {
     product.find({inventory_count: {$gt: 0}}, function (err, products) {
         res.render("displayProducts", {productsForDisplay: products});
     })
-}
+})
+router.get('/fetchproducts', function (req, res) {
+    product.find({}, function (err, prod) {
+        res.render('displayProducts', {productsForDisplay: prod})
+    })
+})
 
 
 module.exports = router;

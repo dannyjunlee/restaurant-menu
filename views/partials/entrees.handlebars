@@ -2,7 +2,8 @@
     <h2>Entrees</h2>
         <ul>
         {{#each entrees as |dish|}}
-        <li>{{dish.dish_name}}</li>
+        <li>{{dish.dish_name}} ${{dish.dish_price}}</li>
+    <p class="itemDesc">{{dish.dish_description}}</p>
         {{/each}}
         </ul>
 </section>

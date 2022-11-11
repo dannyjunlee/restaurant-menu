@@ -2,7 +2,8 @@
     <h2>Drinks</h2>
         <ul>
         {{#each drinks as |dish|}}
-        <li>{{dish.dish_name}}</li>
+        <li>{{dish.dish_name}} ${{dish.dish_price}}</li>
+    <p class="itemDesc">{{dish.dish_description}}</p>
         {{/each}}
         </ul>
 </section>

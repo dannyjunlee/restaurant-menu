@@ -35,6 +35,7 @@ router.get('/:dish_type', async (req, res) => {
             res.status(404).json({ message: 'Not a valid dish category' })
         }
         res.status(200).json(dishData);
+        res.render(dishData);
     } catch (err) {
         res.status(500).json(err);
     }

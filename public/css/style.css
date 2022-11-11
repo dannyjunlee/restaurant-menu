@@ -3,10 +3,16 @@
     src: url(../font/Poke.ttf);
 }
 
+/* GENERAL LAYOUT FEATURES */
+
 body {
     position: relative;
     padding-top: 20px;
     background-color: black;
+}
+
+#logo {
+    border: 2px solid cyan;
 }
 
 header {
@@ -38,6 +44,8 @@ header:hover {
     filter: drop-shadow(5px 5px 5px gray);
 }
 
+/* MENU COMPONENTS */
+
 h2 {
     font-family: poke, Arial, Helvetica, sans-serif;
     letter-spacing: 4px;
@@ -51,7 +59,7 @@ h2 {
 
 h2:hover {
     transform: scale(102%);
-    filter: drop-shadow(5px 5px 5px black);
+    filter: drop-shadow(5px 5px 5px gray);
 }
 
 .menu {
@@ -126,6 +134,23 @@ h2:hover {
     padding-right: 40px;
 }
 
+.appetizer_list li, .entree_list li, .dessert_list li, .drink_list li {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.appetizer_list li:hover, .entree_list li:hover, .dessert_list li:hover, .drink_list li:hover {
+    filter: drop-shadow(5px 5px 5px gray);
+    cursor: pointer;
+}
+
+.appetizer_list p, .entree_list p, .dessert_list p, .drink_list p {
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+/* SIGN IN MODAL */
+
 .open-button {
     background-color: black;
     font-family: poke, Arial, Helvetica, sans-serif;
@@ -137,15 +162,17 @@ h2:hover {
     border: 1px solid white;
     cursor: pointer;
     opacity: 0.8;
-    width: 200px;
+    width: 150px;
     margin-left: -50%;
 }
   
   /* The popup form - hidden by default */
 .form-popup {
     display: none;
-    border: 3px solid #f1f1f1;
+    border: 3px solid black;
     z-index: 9;
+    max-width: fit-content;
+    position: absolute;
 }
   
   /* Add styles to the form container */
@@ -157,7 +184,7 @@ h2:hover {
   
   /* Full-width input fields */
 .form-container input[type=text], .form-container input[type=password] {
-    width: 100%;
+    width: 90%;
     padding: 15px;
     margin: 5px 0 22px 0;
     border: none;
@@ -194,23 +221,18 @@ h2:hover {
     box-shadow: 5px 5px 5px gray;
 }
 
-.appetizer_list, .entree_list, .dessert_list, .drink_list {
-    font-weight: bold;
-}
-
-.appetizer_list li, .entree_list li, .dessert_list li, .drink_list li {
-    font-size: 22px;
-}
-
-.appetizer_list li:hover, .entree_list li:hover, .dessert_list li:hover, .drink_list li:hover {
-    filter: drop-shadow(5px 5px 5px gray);
-}
-
-.appetizer_list p, .entree_list p, .dessert_list p, .drink_list p {
-    margin-left: 20px;
-    margin-bottom: 30px;
-}
-
-#logo {
-    border: 2px solid cyan;
+@media screen and (min-width: 2000px) {
+    header {
+        float: left;
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+    }
+    #logo {
+        width: 25%;
+    }
+    main {
+        float: right;
+        width: 75%;
+    }
 }

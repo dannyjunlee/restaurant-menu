@@ -1,0 +1,33 @@
+<a href="cart/clear" id="clearCart"> Clear Cart</a>
+<a href="/fetchproducts" > Click here to add more food</a>
+<form method="POST" action="/updatecart">
+    <table>
+        <tr>
+            <td> food </td>
+            <td> price </td>
+            <td> quantity</td>
+        </tr>
+{{#each cartitems}}
+    <tr>
+    <tr>
+    <td> {{food}} </td>
+    <td>  {{price}} </td>
+    <td> <input type="text" name="{{food}}" value="{{quantity}}" > </td>
+    </tr>
+{{/each}}
+    </table>
+    <div id="footer">
+Total Price is {{total_price}} <br>
+<button type="submit"> Update Cart </button>
+{{#if checkout }}
+<button type="button" onclick="passEvent(event)" id="checkout"> Checkout</button>
+{{/if}}
+    </div>
+</form>
+
+<a href="cart/clear" id="clearCart"> Clear Cart</a>
+<a href="/fetchproducts" > Click here to add more food</a>
+
+
+
+

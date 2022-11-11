@@ -41,15 +41,7 @@ User.init(
         validate: {
             isCreditCard: true,
         },
-    },
-    favorites: {
-        type: DataTypes.INTEGER,
-        allowNull: true,
-        references: {
-          model: 'dish',
-          key: 'id',
-        },
-    },
+    }
   },
   {
     hooks: {

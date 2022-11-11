@@ -62,28 +62,31 @@ router.put('/:id', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
     try {
-      const userData = await User.destroy({
-        where: {
-          id: req.params.id,
-        },
-      });
-  
-      if (!userData) {
-        res.status(404).json({ message: 'No user found with this id!' });
-        return;
-      }
-  
-      res.status(200).json(userData);
+        const userData = await User.destroy({
+            where: {
+                id: req.params.id,
+            },
+        });
+
+        if (!userData) {
+            res.status(404).json({ message: 'No user found with this id!' });
+            return;
+        }
+
+        res.status(200).json(userData);
     } catch (err) {
-      res.status(500).json(err);
+        res.status(500).json(err);
     }
 });
 
 // login
 
 router.post('/login', async (req, res) => {
+    
+    let dbUserData;
+    
     try {
-        const dbUserData = await User.findOne({
+        dbUserData = await User.findOne({
             where: { email: req.body.email }
         });
 
@@ -103,12 +106,13 @@ router.post('/login', async (req, res) => {
         };
 
         req.session.save(() => {
+            req.session.user_id = dbUserData.id;
             req.session.loggedIn = true;
-            req.session.user_id= req.body.user_id
+            
 
             res
                 .status(200)
-                .json({ user: dbUserData, message: 'You have successfully logged in.'});
+                .json({ user: dbUserData, message: 'You have successfully logged in.' });
         });
     } catch (err) {
         res.status(500).json(err);
@@ -123,6 +127,27 @@ router.post('/logout', (req, res) => {
         });
     } else {
         res.status(404).end();
+    }
+});
+
+
+// add favorite dish
+router.put('/favorite/:dish_id', async (req, res) => {
+    try {
+        const user = await User.findByPk(req.session.user_id);
+        const dish = await Dish.findByPk(req.params.dish_id);
+
+        await user.addDish(dish, {through: UserDish});
+
+       
+
+        if (!req.session.loggedIn) {
+            res.status(404).json({ message: 'You must be logged in to add a dish to your favorites' });
+            return
+        }
+        res.status(200).json({message: `${user.username} has successfully added ${dish.dish_name} to their favorites`});
+    } catch (err) {
+        res.status(500).json(err);
     }
 });
 

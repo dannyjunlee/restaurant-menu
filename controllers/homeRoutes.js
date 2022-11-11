@@ -13,8 +13,20 @@ router.get('/', async (req, res) => {
             dish.get({ plain: true })
         );
 
+        const appetizers = dishes.filter(dish => dish.dish_type === 'Appetizer');
+
+        const entrees = dishes.filter(dish => dish.dish_type === 'Entree');
+
+        const desserts = dishes.filter(dish => dish.dish_type === 'Dessert');
+
+        const drinks = dishes.filter(dish => dish.dish_type === 'Drink');
+
         res.render('homepage', {
             dishes,
+            appetizers,
+            entrees,
+            drinks,
+            desserts,
             loggedIn: req.session.loggedIn
         });
     } catch (err) {
@@ -36,7 +48,7 @@ router.get('/:dish_type', async (req, res) => {
             dish.get({ plain: true })
         );
 
-        res.render('dish', {
+        res.render('homepage', {
             dishes,
             loggedIn: req.session.loggedIn
         });
@@ -44,5 +56,6 @@ router.get('/:dish_type', async (req, res) => {
         res.status(500).json(err);
     };
 });
+
 
 module.exports = router;

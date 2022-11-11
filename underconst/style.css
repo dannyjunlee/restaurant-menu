@@ -76,7 +76,8 @@ h2:hover {
 #appetizers ul {
     list-style: none;
     text-align: left;
-    padding-left: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 #entrees {
@@ -91,7 +92,8 @@ h2:hover {
 #entrees ul {
     list-style: none;
     text-align: left;
-    padding-left: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 #desserts {
@@ -106,7 +108,8 @@ h2:hover {
 #desserts ul {
     list-style: none;
     text-align: left;
-    padding-left: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 #drinks {
@@ -121,14 +124,23 @@ h2:hover {
 #drinks ul {
     list-style: none;
     text-align: left;
-    padding-left: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 @media screen and (max-width: 1000px) {
     #restinfo {
         margin: 0;
     }
+    .row {
+        flex-direction: column-reverse;
+    }
+    .col-25 {
+        margin-bottom: 20px;
+    }
 }
+
+    /* SIGN IN STUFF */
 
 .open-button {
     background-color: black;
@@ -192,4 +204,107 @@ h2:hover {
   .form-container .btn:hover, .open-button:hover {
     opacity: 1;
     box-shadow: 5px 5px 5px gray;
+  }
+
+  /* CART STUFF */
+
+  .cart-button {
+    background-color: black;
+    color: white;
+    box-shadow: 5px 5px 5px gray;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  #cartContainer {
+    display: none;
+  }
+
+  .row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }
+  
+  .col-25 {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+  }
+  
+  .col-50 {
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+  }
+  
+  .col-75 {
+    -ms-flex: 75%; /* IE10 */
+    flex: 75%;
+  }
+  
+  .col-25,
+  .col-50,
+  .col-75 {
+    padding: 0 16px;
+  }
+  
+  .container {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+  }
+  
+  input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  label {
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+  }
+  
+  .btn {
+    background-color: white;
+    color: black;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid black;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+  }
+  
+  .btn:hover {
+    background-color: red;
+  }
+  
+  a {
+    color: red;
+  }
+  
+  hr {
+    border: 1px solid lightgrey;
+  }
+  
+  span.price {
+    float: right;
+    color: grey;
   }

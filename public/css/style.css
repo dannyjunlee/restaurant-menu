@@ -1,53 +1,7 @@
-/* :root {
-    --black: black;
-    --red: red;
-    --white: white;
-
+@font-face {
+    font-family: poke;
+    src: url(../font/Poke.ttf);
 }
-
-body {
-    display: flex;
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    background-color: var(--black);
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
-    flex-direction: column;
-}
-
-nav {
-    margin-left: 30px;
-}
-
-main div {
-    border-radius: 5px;
-    border: 2px solid var(--red);
-    min-height: 200px;
-    background-color: var(--white);
-    margin-top: 20px;
-    margin-right: 30px;
-    margin-left: 30px;
-}
-
-h2 {
-    margin: 2px;
-    text-align: center;
-    text-decoration:underline;
-}
-
-#header {
-    color: var(--white);
-    text-align: center;
-    font-weight: 900;
-    font-size: 50px;
-}
-
-
-footer{
-    color: var(--white);
-    text-align: center;
-} */
 
 body {
     position: relative;
@@ -85,7 +39,8 @@ header:hover {
 }
 
 h2 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: poke, Arial, Helvetica, sans-serif;
+    letter-spacing: 4px;
     text-align: center;
     font-size: 32px;
     color: black;
@@ -104,6 +59,7 @@ h2:hover {
     flex-direction: column;
     margin-left: 60px;
     margin-right: 60px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #appetizers {
@@ -172,9 +128,12 @@ h2:hover {
 
 .open-button {
     background-color: black;
+    font-family: poke, Arial, Helvetica, sans-serif;
+    font-size: larger;
+    letter-spacing: 3px;
     color: white;
     box-shadow: 5px 5px 5px gray;
-    padding: 16px 20px;
+    padding: 5px 10px;
     border: 1px solid white;
     cursor: pointer;
     opacity: 0.8;
@@ -239,24 +198,15 @@ h2:hover {
     font-weight: bold;
 }
 
-.appetizer_list li {
+.appetizer_list li, .entree_list li, .dessert_list li, .drink_list li {
     font-size: 22px;
 }
 
-.appetizer_list p {
-    margin-left: 20px;
-    margin-bottom: 30px;
+.appetizer_list li:hover, .entree_list li:hover, .dessert_list li:hover, .drink_list li:hover {
+    filter: drop-shadow(5px 5px 5px gray);
 }
 
-.entree_list {
-    font-weight: bold;
-}
-
-.entree_list li {
-    font-size: 22px;
-}
-
-.entree_list p {
+.appetizer_list p, .entree_list p, .dessert_list p, .drink_list p {
     margin-left: 20px;
     margin-bottom: 30px;
 }

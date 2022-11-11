@@ -1,4 +1,4 @@
-# Xcaliber
+<img src="assets/LucariosFullTrans.png" style="width:600px; height auto;">
 
 ## Table of contents
 *[Introduction](#introduction)  
@@ -13,7 +13,7 @@
 
 ## Introduction
  
- This app is utilized to assist the user is making it easy to order food via mobile app for the resturant Xcaliber. This app utilizes beneficial UI which reminds users of favorite foods or food that has been ordered more than one time
+ This app is utilized to assist the user is making it easy to order food via mobile app for the resturant Lucario's. This app utilizes beneficial UI which reminds users of favorite foods or food that has been ordered more than one time
 
  ## Technologies Used
 

@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --black: black;
     --red: red;
     --white: white;
@@ -49,4 +49,115 @@ h2 {
 footer{
     color: var(--white);
     text-align: center;
+} */
+
+body {
+    position: relative;
+    padding-top: 20px;
+    background-color: black;
+}
+
+header {
+    text-align: center;
+}
+
+#restinfo {
+    color: white;
+    margin-right: -400px;
+    margin-top: -50px;
+    margin-bottom: 25px;
+}
+
+#restinfo:hover {
+    filter: drop-shadow(5px 5px 5px gray);
+}
+
+header:hover {
+    filter: drop-shadow(5px 5px 5px gray);
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 32px;
+    color: black;
+    font-weight: bold;
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+h2:hover {
+    transform: scale(102%);
+    filter: drop-shadow(5px 5px 5px black);
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+#appetizers {
+    margin: 20px;
+    color: black;
+    border: 5px solid red;
+    box-shadow: 5px 5px 5px gray;
+    padding: 10px;
+    background: white;
+}
+
+#appetizers ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#entrees {
+    margin: 20px;
+    color: black;
+    border: 5px solid red;
+    box-shadow: 5px 5px 5px gray;
+    padding: 10px;
+    background: white;
+}
+
+#entrees ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#desserts {
+    margin: 20px;
+    color: black;
+    border: 5px solid red;
+    box-shadow: 5px 5px 5px gray;
+    padding: 10px;
+    background: white;
+}
+
+#desserts ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#drinks {
+    margin: 20px;
+    color: black;
+    border: 5px solid red;
+    box-shadow: 5px 5px 5px gray;
+    padding: 10px;
+    background: white;
+}
+
+#drinks ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 40px;
 }

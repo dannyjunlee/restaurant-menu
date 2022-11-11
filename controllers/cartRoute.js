@@ -15,6 +15,11 @@ router.get('/', (req, res) => {
     res.render('carts', { cartitems: cart, total_price: "$16" })
 })
 
+router.get('/fetchproducts/:check', function (req, res) {
+    product.find({inventory_count: {$gt: 0}}, function (err, products) {
+        res.render("displayProducts", {productsForDisplay: products});
+    })
+}
 
 
 module.exports = router;

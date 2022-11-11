@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Dish } = require('../../models');
+const bcrypt = require('bcrypt');
 
 // get all users
 router.get('/', async (req, res) => {
@@ -18,14 +19,7 @@ router.get('/', async (req, res) => {
 // create new user (aka signup)
 router.post('/', async (req, res) => {
     try {
-        const userData = await User.create({
-            username: req.body.username,
-            email: req.body.email,
-            password: req.body.password,
-            phone: req.body.phone,
-            address: req.body.address,
-            creditcard: req.body.creditcard,
-        });
+        const userData = await User.create(req.body);
 
         req.session.save(() => {
             req.session.user_id = userData.id;
@@ -93,17 +87,24 @@ router.post('/login', async (req, res) => {
             where: { email: req.body.email }
         });
 
-        const validPassword = await dbUserData.checkPassword(req.body.password);
+        if (!dbUserData) {
+            res.status(404).json({ message: 'Incorrect email or password. Please try again!' });
+            return;
+        };
 
-        if (!dbUserData || !validPassword) {
-            res
-                .status(400)
-                .json({ message: 'Incorrect email or password. Please try again!' });
+        const validPassword = await bcrypt.compare(
+            req.body.password,
+            dbUserData.password
+        );
+
+        if (!validPassword) {
+            res.status(400).json({ message: 'Incorrect email or password. Please try again!' });
             return;
         };
 
         req.session.save(() => {
             req.session.loggedIn = true;
+            req.session.user_id= req.body.user_id
 
             res
                 .status(200)

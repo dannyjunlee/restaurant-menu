@@ -235,7 +235,7 @@ h2:hover {
     box-shadow: 5px 5px 5px gray;
 }
 
-.appetizer_list {
+.appetizer_list, .entree_list, .dessert_list, .drink_list {
     font-weight: bold;
 }
 
@@ -244,6 +244,19 @@ h2:hover {
 }
 
 .appetizer_list p {
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.entree_list {
+    font-weight: bold;
+}
+
+.entree_list li {
+    font-size: 22px;
+}
+
+.entree_list p {
     margin-left: 20px;
     margin-bottom: 30px;
 }

@@ -25,10 +25,9 @@ router.get('/fetchproducts', function (req, res) {
         res.render('displayProducts', {productsForDisplay: prod})
     })
 })
-app.post('/updatecart', function (req, res) {
+router.post('/updatecart', function (req, res) {
     let testCheck = false;
     let counter = 0;
-    let testInvt = 0;
     let cartinf = req.session.cart;
     let foodArrray = [];
     
@@ -39,6 +38,42 @@ app.post('/updatecart', function (req, res) {
             name: cartitem.name,
             quantity: quant
         }
-}
+        ar.push(cartstoreitem);
+        cartitem.quantity = parseInt(req.body[cartitem.name]);
+        product.find({name: cartitem.name}, function (err, result) {
+            return result
+        })
+        .then
+        // no item
+        (function(result) {
+            if (req.body[cartitem.name] == 0) {
+                let updQuantity;
+                for (let i = 0; i < foodArrray.length; i++) {
+                    if (cartitem.name == foodArrray[i].name)
+                        updQuantity = foodArrray[i].quantity;
+
+                }
+                cartinf.total_price -= updQuantity * cartitem.price;
+                cartinf.items.splice(count - counter, 1);
+                counter++;
+                testCheck = true;
+                }
+                // quantity decrease total decrease
+                else if (difference < 0) {
+                    cartinf.total_price -= (-difference) * cartitem.price;
+                    cartinf.total_price = Math.round(cartinf.total_price * 100) / 100;
+                }
+                // quantity increase total price inc
+                else if (difference > 0) {
+                    cartinf.total_price += (difference) * cartitem.price;
+                    cartinf.total_price = Math.round(cartinf.total_price * 100) / 100;
+                }
+        })
+    })
+})
+router.get('/cart/clear', function (req, res) {
+    req.session.cart = null;
+    res.render('emptycart');
+})
 
 module.exports = router;

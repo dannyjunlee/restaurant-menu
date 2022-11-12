@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/fetchproducts/:check', function (req, res) {
-    product.find({inventory_count: {$gt: 0}}, function (err, products) {
+    product.find({inventory_count: {$food: 0}}, function (err, products) {
         res.render("displayProducts", {productsForDisplay: products});
     })
 })

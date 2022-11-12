@@ -29,7 +29,7 @@ router.post('/updatecart', function (req, res) {
     let testCheck = false;
     let counter = 0;
     let cartinf = req.session.cart;
-    let foodArrray = [];
+    let cart = [];
     
     cartinf.items.forEach(function (cartitem, count) {
         const difference = req.body[cartitem.name] - cartitem.quantity;
@@ -48,9 +48,9 @@ router.post('/updatecart', function (req, res) {
         (function(result) {
             if (req.body[cartitem.name] == 0) {
                 let updQuantity;
-                for (let i = 0; i < foodArrray.length; i++) {
-                    if (cartitem.name == foodArrray[i].name)
-                        updQuantity = foodArrray[i].quantity;
+                for (let i = 0; i < cart.length; i++) {
+                    if (cartitem.name == cart[i].name)
+                        updQuantity = cart[i].quantity;
 
                 }
                 cartinf.total_price -= updQuantity * cartitem.price;
@@ -75,5 +75,6 @@ router.get('/cart/clear', function (req, res) {
     req.session.cart = null;
     res.render('emptycart');
 })
+
 
 module.exports = router;

@@ -8,8 +8,7 @@ const logInRoute= require('./logInRoutes')
 
 router.use('/api', apiRoutes);
 router.use('/cart', cartRoute);
-router.use('/', homeRoutes);
 router.use('/login', logInRoute);
-
+router.use('/', homeRoutes);
 
 module.exports = router;

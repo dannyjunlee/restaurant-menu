@@ -16,7 +16,7 @@ const sess = {
   secret: 'top secret hush hush',
   cookie: {},
   resave: false,
-  saveUnitialized: true,
+  saveUninitialized: true,
   store: new SequelizeStore({
     db: sequelize,
   }),
@@ -25,6 +25,7 @@ const sess = {
 app.use(session(sess));
 
 const hbs = exphbs.create({ helpers });
+
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');

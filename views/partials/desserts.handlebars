@@ -1,3 +1,7 @@
 <section>
     <h2>Desserts</h2>
+    {{#each desserts as |dish|}}
+    <li class="itemName">{{dish.dish_name}} ${{dish.dish_price}}</li>
+    <p class="itemDesc">{{dish.dish_description}}</p>
+    {{/each}}
 </section>

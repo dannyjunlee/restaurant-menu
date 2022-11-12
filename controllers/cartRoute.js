@@ -25,6 +25,20 @@ router.get('/fetchproducts', function (req, res) {
         res.render('displayProducts', {productsForDisplay: prod})
     })
 })
-
+app.post('/updatecart', function (req, res) {
+    let testCheck = false;
+    let counter = 0;
+    let testInvt = 0;
+    let cartinf = req.session.cart;
+    let foodArrray = [];
+    
+    cartinf.items.forEach(function (cartitem, count) {
+        const difference = req.body[cartitem.title] - cartitem.quantity;
+        quant = cartitem.quantity;
+        const cartstoreitem = {
+            name: cartitem.name,
+            quantity: quant
+        }
+}
 
 module.exports = router;

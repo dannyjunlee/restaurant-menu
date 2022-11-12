@@ -13,12 +13,14 @@
         <h1 id="header">Lucarios</h1>
     </header>
     <nav>
-        <a href="/">Home</a>
-        {{#if loggedIn}}
-        <button id="logout" class="btn-no-style">Logout</button>
+        <ul class="nav">
+        <li><a href="/">Home</a></li>
+        {{#unless loggedIn}}
+        <li><a href="/login">Login</a></li>
         {{else}}
-        <a href="/login">Login</a>
-        {{/if}}
+        <li <a href=# id="logout" class="btn-no-style">Logout</a></li>
+        {{/unless}}
+        </ul>
     </nav>
     <main>
         {{{body}}}

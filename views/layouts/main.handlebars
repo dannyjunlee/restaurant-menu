@@ -10,30 +10,29 @@
 
 <body>
     <header>
-        <div class="actionCenter">
-            <button class="open-button" onclick="openForm()">Sign In</button>
+        <section class="actionCenterContainer">
+            <div class="actionCenter">
+                <button class="open-button" onclick="openForm()">Sign In</button>
 
-            <div class="form-popup" id="myForm">
-                <form action="/action_page.php" class="form-container">
-                <h1>Login</h1><br>
+                <div class="form-popup" id="myForm">
+                    <form action="/action_page.php" class="form-container">
+                    <h1 id="loginTitle">Login</h1><br>
+                    
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
                 
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
-            
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-            
-                <button type="submit" class="btn">Login</button>
-                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-                </form>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                
+                    <button type="submit" class="btn">Login</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    </form>
+                </div>
             </div>
-        </div>
-        
             
-        <img id="logo" src="../../images/LucariosFullTrans.png" alt="Lucario's" style="width:65vw; height:auto;">
-
-        <p id="restinfo">123 Pokeball Street - Viridian City, Kanto<br> 555-555-5555</p>
-        
+            <img id="logo" src="../../images/lucarioslogo.png" alt="Lucario's" style="width:65vw; height:auto;">
+            <p id="restinfo">123 Pokeball Street - Viridian City, Kanto<br> 555-555-5555</p>
+        </section>
     </header>
     {{!-- <nav>
         <ul class="nav">

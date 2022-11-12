@@ -8,13 +8,13 @@ var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
 function openForm() {
-  document.getElementById("myForm").style.display = "block";
+  document.getElementById("myForm").style.display = "inline";
 }
 
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
 
-function openCart() {
-  document.getElementById("cartContainer").style.display = "block";
-}
+// function openCart() {
+//   document.getElementById("cartContainer").style.display = "block";
+// }

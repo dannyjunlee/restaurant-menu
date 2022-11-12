@@ -4,4 +4,4 @@ module.exports = {
       // We use the 'toLocaleTimeString()' method to format the time as H:MM:SS AM/PM
       return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
     }
-  }
+}

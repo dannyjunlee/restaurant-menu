@@ -157,6 +157,10 @@ h2:hover {
 
 .actionCenter {
     border: none;
+    border: 5px solid red;
+    box-shadow: 5px 5px 5px gray;
+    padding: 10px;
+    background: white;
 }
 
 .open-button {

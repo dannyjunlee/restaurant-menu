@@ -33,7 +33,7 @@ app.post('/updatecart', function (req, res) {
     let foodArrray = [];
     
     cartinf.items.forEach(function (cartitem, count) {
-        const difference = req.body[cartitem.title] - cartitem.quantity;
+        const difference = req.body[cartitem.name] - cartitem.quantity;
         quant = cartitem.quantity;
         const cartstoreitem = {
             name: cartitem.name,

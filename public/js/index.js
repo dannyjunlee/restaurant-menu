@@ -19,11 +19,18 @@ function closeForm() {
 
 // Function to hide the modal when the Login button is clicked and change the text in the sign in button to "Logged In"
 function signIn() {
-    document.getElementById("myForm").style.display = "none";
-    document.getElementById("openButton").innerHTML = "Logged In";
-    //this shows "Logged In" for a brief moment then goes back to "Sign In"
-    //also needs to be tied into session storage for user data and an if else statement so that if the user info is not valid it remains open and asks for valid info or to sign up instead
+        document.getElementById("myForm").style.display = "none";
+        document.getElementById("openButton").innerHTML = "Logged In";
 }
+
+    //this shows "Logged In" for a brief moment then goes back to "Sign In"
+    //also needs to be tied into session storage for user data and an if else statement so that if the user info is not valid it remains open and asks for valid info or to sign up instead like
+    // if (loggedIn == true) {
+    //     document.getElementById("myForm").style.display = "none";
+    //     document.getElementById("openButton").innerHTML = "Logged In";
+    // } else {
+    //     openForm();
+    // };
 
 //This function below also needs work and integration with session storage, etc
 

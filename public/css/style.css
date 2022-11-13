@@ -1,52 +1,296 @@
-:root {
-    --black: black;
-    --red: red;
-    --white: white;
-
+@font-face {
+    font-family: poke;
+    src: url(../font/Poke.ttf);
 }
 
-
+/* GENERAL LAYOUT FEATURES */
 
 body {
-    display: flex;
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    background-color: var(--black);
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
-    flex-direction: column;
+    position: relative;
+    padding-top: 20px;
+    background-color: black;
 }
 
-nav {
-    margin-left: 30px;
+header {
+    text-align: center;
 }
 
-main div {
-    border-radius: 5px;
-    border: 2px solid var(--red);
-    min-height: 200px;
-    background-color: var(--white);
-    margin-top: 20px;
-    margin-right: 30px;
-    margin-left: 30px;
+/* .nav li a {
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
 }
+
+.nav li a:hover {
+    filter: drop-shadow(5px 5px 5px gray);
+} */
+
+#restinfo {
+    color: white;
+    margin-right: -400px;
+    margin-top: -20px;
+}
+
+#restinfo:hover {
+    filter: drop-shadow(5px 5px 5px gray);
+}
+
+header:hover {
+    filter: drop-shadow(5px 5px 5px gray);
+}
+
+/* MENU COMPONENTS */
 
 h2 {
-    margin: 2px;
+    font-family: poke, Arial, Helvetica, sans-serif;
+    letter-spacing: 4px;
     text-align: center;
-    text-decoration:underline;
+    font-size: 32px;
+    color: black;
+    font-weight: bold;
+    margin-top: 10px;
+    padding-bottom: 20px;
 }
 
-#header {
-    color: var(--white);
-    text-align: center;
-    font-weight: 900;
-    font-size: 50px;
+h2:hover {
+    transform: scale(102%);
+    filter: drop-shadow(5px 5px 5px gray);
 }
 
+.menu {
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    margin-right: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-footer{
-    color: var(--white);
-    text-align: center;
+#appetizers {
+    margin: 20px;
+    color: black;
+    border: 5px solid red;
+    box-shadow: 5px 5px 5px gray;
+    padding: 10px;
+    background: white;
+}
+
+#appetizers ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#entrees {
+    margin: 20px;
+    color: black;
+    border: 5px solid red;
+    box-shadow: 5px 5px 5px gray;
+    padding: 10px;
+    background: white;
+}
+
+#entrees ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#desserts {
+    margin: 20px;
+    color: black;
+    border: 5px solid red;
+    box-shadow: 5px 5px 5px gray;
+    padding: 10px;
+    background: white;
+}
+
+#desserts ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#drinks {
+    margin: 20px;
+    color: black;
+    border: 5px solid red;
+    box-shadow: 5px 5px 5px gray;
+    padding: 10px;
+    background: white;
+}
+
+#drinks ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.appetizer_list li, .entree_list li, .dessert_list li, .drink_list li {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.appetizer_list li:hover, .entree_list li:hover, .dessert_list li:hover, .drink_list li:hover {
+    filter: drop-shadow(5px 5px 5px gray);
+    cursor: pointer;
+}
+
+.appetizer_list p, .entree_list p, .dessert_list p, .drink_list p {
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+/* SIGN IN MODAL */
+
+.actionCenterContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: left;
+    width: 20vw;
+    margin-top: 20px;
+}
+
+.actionCenter {
+    border: 5px solid red;
+    box-shadow: 5px 5px 5px gray;
+    padding: 10px;
+    background: white;
+}
+
+.open-button {
+    background-color: black;
+    font-family: poke, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    letter-spacing: 3px;
+    color: white;
+    box-shadow: 5px 5px 5px gray;
+    border: 1px solid white;
+    cursor: pointer;
+    opacity: 0.8;
+    width: 150px;
+    height: 50px;
+}
+
+  /* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    z-index: 9;
+    max-width: fit-content;
+    font-family: poke, Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
+}
+
+  /* Add styles to the form container */
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+  
+  /* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+#loginTitle {
+    margin-bottom: -30px;
+    margin-top: -20px;
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+  /* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+  
+  /* Set a style for the submit/login button */
+.form-container .btn {
+    background-color: red;
+    color: white;
+    padding: 16px 20px;
+    border: 2px solid black;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+  /* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+    box-shadow: 5px 5px 5px gray;
+}
+
+@media screen and (min-width: 1800px) {
+    header {
+        float: left;
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        margin-top: 20px;
+    }
+    .actionCenter {
+        align-self: center;
+    }
+    #logo {
+        max-width: 90%;
+        align-self: center;
+        margin: 20px;
+    }
+    #restinfo {
+        margin: 20px;
+    }
+    main {
+        float: right;
+        width: 75%;
+        margin-top: 0px;
+    }
+    .menu {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #restinfo {
+        margin: 20px;
+    }
+    main {
+        margin-top: 0px;
+    }
+    .menu {
+        margin: 5px;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .open-button {
+        background-color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 3px;
+        color: white;
+        box-shadow: 5px 5px 5px gray;
+        border: 1px solid white;
+        cursor: pointer;
+        opacity: 0.8;
+        width: 100px;
+        height: 30px;
+    }
 }

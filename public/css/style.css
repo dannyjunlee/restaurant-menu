@@ -156,7 +156,6 @@ h2:hover {
 }
 
 .actionCenter {
-    border: none;
     border: 5px solid red;
     box-shadow: 5px 5px 5px gray;
     padding: 10px;
@@ -180,7 +179,6 @@ h2:hover {
   /* The popup form - hidden by default */
 .form-popup {
     display: none;
-    border: 3px solid black;
     z-index: 9;
     max-width: fit-content;
     font-family: poke, Arial, Helvetica, sans-serif;
@@ -229,13 +227,7 @@ label {
     margin-bottom:10px;
     opacity: 0.8;
 }
-  
-  /* Add a red background color to the cancel button */
-.form-container .cancel {
-    background-color: red;
-    border: 2px solid black;
-}
-  
+
   /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
     opacity: 1;
@@ -300,16 +292,5 @@ label {
         opacity: 0.8;
         width: 100px;
         height: 30px;
-    }
-    .form-popup {
-        display: none;
-        border: 3px solid black;
-        z-index: 11;
-        max-width: fit-content;
-        position: fixed;
-        top: 55px;
-        right: 0;
-        font-family: poke, Arial, Helvetica, sans-serif;
-        letter-spacing: 3px;
     }
 }

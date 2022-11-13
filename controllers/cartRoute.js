@@ -21,7 +21,7 @@ router.get('/fetchproducts/:check', function (req, res) {
     })
 })
 router.get('/fetchproducts', function (req, res) {
-    product.find({}, function (err, prod) {
+    product.findOne({}, function (err, prod) {
         res.render('displayProducts', {productsForDisplay: prod})
     })
 })
@@ -71,9 +71,9 @@ router.post('/updatecart', function (req, res) {
         })
     })
 })
-router.get('/cart/clear', function (req, res) {
+router.get('/clear', function (req, res) {
     req.session.cart = null;
-    res.render('emptycart');
+    // res.render('carts');
 })
 
 

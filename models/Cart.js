@@ -14,17 +14,14 @@ Cart.init(
         inventory_count: {
             type: DataTypes.INTEGER
         }
-    }
+    },
     {
         sequelize,
         freezeTableName: true,
         underscored: true,
         modelName: 'cart',
-      }
+    }
 )
-
-
-
 
 
 module.exports = Cart;

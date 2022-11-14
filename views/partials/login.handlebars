@@ -12,12 +12,31 @@
             <input type="password" id="password-login" placeholder="Enter Password" name="psw" required>
 
             <button id="login-form" type="submit" class="btn">Login</button>
-            <button id='signupBtn' type="button" class="btn" onclick="closeForm()">Sign Up</button>
             <button id='closeBtn' type="button" class="btn" onclick="closeForm()">Close</button>
         </form>
-</div>
+    </div>
 
-<button class="cart-button" id="cart-button">Cart</button>
+    <button class="open-button" id="signupButton" onclick="openSignup()">Sign Up</button>
+
+    <div class="form-popup" id="signupForm">
+        <form action="/" class="form-container">
+            <h1 id="signupTitle">Sign Up</h1><br>
+
+            <label for="username"><b>Username</b></label>
+            <input type="text" id="username-signup" placeholder="Enter Username" name="username" required>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" id="email-signup" placeholder="Enter Email" name="email" required>
+
+            <label for="password"><b>Password</b></label>
+            <input type="password" id="password-signup" placeholder="Enter Password" name="password" required>
+
+            <button id='signupBtn' type="button" class="btn">Sign Up</button>
+            <button id="closeSignup" type="button" class="btn" onclick="closeSignup()">Close</button>
+        </form>
+    </div>
+
+    <button class="cart-button" id="cart-button">Cart</button>
 
 <div class="row" id="cartContainer">
     <div class="col-75">
@@ -65,6 +84,10 @@
                     <label for="cvv">CVV</label>
                     <input type="text" id="cvv" name="cvv" placeholder="352">
                 </div>
+                <div class="col-50">
+                    <label for="notes">Notes</label>
+                    <input type="text" id="notes" name="notes" placeholder="allergies">
+                </div>
                 </div>
             </div>
             
@@ -76,8 +99,11 @@
         </form>
         </div>
     </div>
+    {{!-- {{#each cartItem as |item|}}
+        <p><a href="#">{{item[0]}}</a> <span class="price">${{item[1].price}} Quantity {{item[1].number}}</span></p> --}}
     <div class="col-25">
         <div class="container">
+            {{!-- THIS NEEDS TO BE INTEGRATED WITH ADD TO CART BUTTON --}}
         <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
         <p><a href="#">Product 1</a> <span class="price">$15</span></p>
         <p><a href="#">Product 2</a> <span class="price">$5</span></p>

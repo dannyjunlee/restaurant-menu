@@ -1,7 +1,6 @@
 const loginFormHandler = async (event) => {
     event.preventDefault();
 
-    // Check name of IDs
     const email = document.querySelector('#email-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
 
@@ -15,7 +14,7 @@ const loginFormHandler = async (event) => {
         if (response.ok) {
             window.location.replace('/');
         } else {
-            alert('Failed to log in.');
+            alert('Failed to login');
         }
     }
 };
@@ -23,7 +22,6 @@ const loginFormHandler = async (event) => {
 const signupFormHandler = async (event) => {
     event.preventDefault();
 
-    // Check name of IDs
     const username = document.querySelector('#username-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
@@ -38,7 +36,7 @@ const signupFormHandler = async (event) => {
         if (response.ok) {
             window.location.replace('/');
         } else {
-            alert('Failed to sign up.');
+            alert('Failed to sign up');
         }
     }
 };

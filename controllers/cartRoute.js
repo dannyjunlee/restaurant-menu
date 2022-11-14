@@ -20,18 +20,19 @@ router.get('/fetchdish/:check', function (req, res) {
         res.render("displayDish");
     })
 })
-router.get('/fetchdish', function (req, res) {
-    dish.findOne({}, function (err, prod) {
+router.get('/', function (req, res) {
+    dish.findOne({}, function (err, dish) {
         res.render('displayDish')
     })
 })
 router.post('/updatecart', function (req, res) {
+    console.log("the Session" , req.session)
     let testCheck = false;
     let counter = 0;
-    let cartinf = req.session.cart;
+    let cartinf = req.session.cart || {dish:[]};
     let cart = [];
     
-    cartinf.items.forEach(function (cartitem, count) {
+    cartinf.dish.forEach(function (cartitem, count) {
         const difference = req.body[cartitem.name] - cartitem.quantity;
         quant = cartitem.quantity;
         const cartstoreitem = {

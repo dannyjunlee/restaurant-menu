@@ -17,19 +17,19 @@ Favorite.init(
         },
         user_id: {
             type: DataTypes.INTEGER,
-            allowNull: false,
             references: {
                 model: 'user',
                 key: 'id',
             },
+        onDelete: 'CASCADE'
         },
         dish_id: {
             type: DataTypes.INTEGER,
-            allowNull: false,
             references: {
                 model: 'dish',
                 key: 'id',
             },
+        onDelete: 'CASCADE'
         }
     },
     {

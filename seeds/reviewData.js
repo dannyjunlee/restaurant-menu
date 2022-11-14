@@ -27,6 +27,6 @@ const reviewdata = [
     },
 ];
 
-const seedReview = () => Review.bulkCreate(reviewdata);
+const seedReview = async () => await Review.bulkCreate(reviewdata);
 
 module.exports = seedReview;

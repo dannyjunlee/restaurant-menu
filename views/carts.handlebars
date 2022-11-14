@@ -1,9 +1,9 @@
 <button id="clearCart"> Clear Cart</button>
 <a href="/fetchdish" > Click here to add more food</a>
 <form method="POST" action="/updatecart">
-    <table>
+    <table class="cart">
         <tr>
-            <td> food </td>
+            <td> dish </td>
             <td> price </td>
             <td> quantity</td>
         </tr>
@@ -12,11 +12,11 @@
     <tr>
     <td> {{dish}} </td>
     <td>  {{price}} </td>
-    <td> <input type="text" name="{{food}}" value="{{quantity}}" > </td>
+    <td> <input type="text" name="{{dish}}" value="{{quantity}}" > </td>
     </tr>
 {{/each}}
     </table>
-    <div id="footer">
+    <div id="footer" class="cart">
 Total Price is {{total_price}} <br>
 <button type="submit"> Update Cart </button>
 {{#if checkout }}

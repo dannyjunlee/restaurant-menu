@@ -129,6 +129,14 @@ h2:hover {
     padding-right: 40px;
 }
 
+.cart{
+    color: black;
+    border: 5px solid red;
+    box-shadow: 5px 5px 5px gray;
+    padding: 10px;
+    background: white;
+}
+
 .appetizer_list li,
 .entree_list li,
 .dessert_list li,

@@ -188,7 +188,7 @@ h2:hover {
 }
 
 .open-button,
-.cart-button
+.cart-button,
 .logout-button {
     background-color: black;
     font-family: poke, Arial, Helvetica, sans-serif;
@@ -358,17 +358,6 @@ span.price {
     width: 100%;
     margin-bottom: 10px;
     opacity: 0.8;
-}
-
-#closeCartBtn {
-    background-color: red;
-    color: white;
-    padding: 16px 20px;
-    border: 2px solid black;
-    cursor: pointer;
-    margin-bottom: 10px;
-    opacity: 0.8;
-    width: 85%;
 }
 
 .col-50 input {

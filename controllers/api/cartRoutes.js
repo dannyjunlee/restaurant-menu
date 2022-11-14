@@ -11,9 +11,10 @@ router.get('/', (req, res) => {
 router.put('/', (req, res) => {
     if (!req.session.cart) req.session.cart = {};
     const cart = req.session.cart;
-    const { dishName, number, price } = req.body;
+    const { dishName: dishName, number: number, price: price } = req.body;
     if (!cart[dishName]) {
         cart[dishName] = {
+            dishName: dishName,
             number: 0,
             price: price
         };

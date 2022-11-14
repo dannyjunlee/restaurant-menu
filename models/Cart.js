@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Cart extends Model {}
+class Cart extends Model { }
 
 Cart.init(
     {
@@ -14,13 +14,13 @@ Cart.init(
         inventory_count: {
             type: DataTypes.INTEGER
         }
-    }
+    },
     {
         sequelize,
         freezeTableName: true,
         underscored: true,
         modelName: 'cart',
-      }
+    }
 )
 
 

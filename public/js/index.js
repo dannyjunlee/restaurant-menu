@@ -1,42 +1,11 @@
-// // Get the modal
-// const modal = document.getElementById("myModal");
-// // Get the button that opens the modal
-// const btn = document.getElementById("myBtn");
-// // Get the <span> element that closes the modal
-// const span = document.getElementsByClassName("close")[0];
-// //Get the login button
-// const loginBtn = document.getElementById('openButton')
-// //get the entire action center
-// const actionCenterEl = document.getElementById('actionCenter');
-// //get the close button
-// const closeBtn = doument.getElementById('closeBtn')
-
-// // Function to show the modal when the sign in button is clicked and hide the sign in button
-// function openForm() {
-//   document.getElementById("myForm").style.display = "inline";
-//   // loginBtn.style.display = 'none';
-// }
-
-// // Function to hide the modal when the close button is clicked
-// function closeForm() {
-//   actionCenterEl.style.display = 'none';
-//   // loginBtn.style.display = 'inline';
-// }
-
-// // Function to hide the modal when the Login button is clicked and change the text in the sign in button to "Logged In"
-// function signIn() {
-//   document.getElementById("myForm").style.display = "none";
-//   document.getElementById("openButton").innerHTML = "Logged In";
-// }
-
 // Get the modal
-var modal = document.getElementById("myModal");
+// const modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+// const btn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+const span = document.getElementsByClassName("close")[0];
 
 function openForm() {
   document.getElementById("myForm").style.display = "inline";
@@ -105,3 +74,12 @@ function checkPosition(position) {
 }
 
 getLocation()
+document.getElementById("cart-button").addEventListener("click", function() {
+  console.log(document.getElementById("cartContainer").style.display);
+  if (document.getElementById("cartContainer").style.display === "none") {
+    openCart();
+  }
+  else {
+    closeCart();
+  }
+});

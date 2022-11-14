@@ -1,15 +1,15 @@
 // Get the modal
-const modal = document.getElementById("myModal");
+// const modal = document.getElementById("myModal");
 // Get the button that opens the modal
-const btn = document.getElementById("myBtn");
+// const btn = document.getElementById("myBtn");
 // Get the <span> element that closes the modal
-const span = document.getElementsByClassName("close")[0];
+// const span = document.getElementsByClassName("close")[0];
 //Get the login button
-const loginBtn = document.getElementById('openButton')
+const loginBtn = document.getElementById('openButton');
 //get the entire action center
 const actionCenterEl = document.getElementById('actionCenter');
 //get the close button
-const closeBtn = document.getElementById('closeBtn')
+// const closeBtn = document.getElementById('closeBtn')
 
 // Function to show the modal when the sign in button is clicked and hide the sign in button
 function openForm() {
@@ -26,7 +26,7 @@ function closeForm() {
 // Function to hide the modal when the Login button is clicked and change the text in the sign in button to "Logged In"
 function signIn() {
   document.getElementById("myForm").style.display = "none";
-  document.getElementById("openButton").innerHTML = "Logged In";
+  loginBtn.innerHTML = "Logged In";
 }
 
 

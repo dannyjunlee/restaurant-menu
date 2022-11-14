@@ -3,6 +3,7 @@
     <ul class="appetizer_list">
         {{#each appetizers as |dish|}}
         <li>
+            <button class="fave">&#10084;</button>
             <span class="dishName">{{dish.dish_name}}</span> <span class="dishPrice">${{dish.dish_price}}</span>
             <aside class="quantity">
                 <div class="buttonDiv">
@@ -10,6 +11,7 @@
                     <span class="numberPlace">0</span>
                     <button class="plusBtn">+</button>
                     <button class="submitBtn">add</button>
+
                 </div>
             </aside>
         </li>

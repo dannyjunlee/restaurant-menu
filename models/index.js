@@ -4,11 +4,6 @@ const Review = require('./Review');
 const Cart = require('./Cart');
 const Favorite = require( './Favorite');
 
-User.hasMany(Dish, {
-    foreignKey: 'user_id',
-    onDelete: 'CASCADE',
-});
-  
 Dish.hasMany(Review, {
     foreignKey: 'dish_id',
     onDelete: 'CASCADE',
@@ -24,10 +19,6 @@ Review.belongsTo(Dish, {
 });
 
 Review.belongsTo(User, {
-    foreignKey: 'user_id',
-});
-
-Dish.belongsTo(User, {
     foreignKey: 'user_id',
 });
 

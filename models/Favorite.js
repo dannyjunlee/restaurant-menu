@@ -17,21 +17,19 @@ Favorite.init(
         },
         user_id: {
             type: DataTypes.INTEGER,
-            allowNull: false,
             references: {
-                model: User,
+                model: 'user',
                 key: 'id',
             },
-            onDelete: "CASCADE"
+        onDelete: 'CASCADE'
         },
         dish_id: {
             type: DataTypes.INTEGER,
-            allowNull: false,
             references: {
-                model: Dish,
+                model: 'dish',
                 key: 'id',
             },
-            onDelete: "CASCADE"
+        onDelete: 'CASCADE'
         }
     },
     {
@@ -39,7 +37,7 @@ Favorite.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'Favorite',
+        modelName: 'favorite',
     }
 )
 

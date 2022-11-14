@@ -20,17 +20,30 @@ router.get('/', async (req, res) => {
 // create new user (aka signup)
 router.post('/', async (req, res) => {
     try {
-        const userData = await User.create(req.body);
 
-        req.session.save(() => {
-            req.session.user_id = userData.id;
-            req.session.loggedIn = true;
-            req.session.cart = []
-
-            res.status(200).json(userData);
+        const username = await User.findOne({
+            where: { username: req.body.username }
         });
+
+        const email = await User.findOne({
+            where: { email: req.body.email }
+        });
+
+        if (!username && !email) {
+            const userData = await User.create(req.body);
+
+            req.session.save(() => {
+                req.session.user_id = userData.id;
+                req.session.loggedIn = true;
+                req.session.cart = []
+
+                res.status(200).json(userData);
+            });
+        } else {
+            res.status(401).json({ message: 'User already exists with this id and/or email' });
+        };
     } catch (err) {
-        res.status(400).json(err);
+        res.status(500).json(err);
     }
 });
 

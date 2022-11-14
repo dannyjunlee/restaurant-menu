@@ -12,8 +12,27 @@
             <input type="password" id="password-login" placeholder="Enter Password" name="psw" required>
 
             <button id="login-form" type="submit" class="btn">Login</button>
-            <button id='signupBtn' type="button" class="btn" onclick="closeForm()">Sign Up</button>
             <button id='closeBtn' type="button" class="btn" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <button class="open-button" id="signupButton" onclick="openSignup()">Sign Up</button>
+
+    <div class="form-popup" id="signupForm">
+        <form action="/" class="form-container">
+            <h1 id="signupTitle">Sign Up</h1><br>
+
+            <label for="username"><b>Username</b></label>
+            <input type="text" id="username-signup" placeholder="Enter Username" name="username" required>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" id="email-signup" placeholder="Enter Email" name="email" required>
+
+            <label for="password"><b>Password</b></label>
+            <input type="password" id="password-signup" placeholder="Enter Password" name="password" required>
+
+            <button id='signupBtn' type="button" class="btn">Sign Up</button>
+            <button id="closeSignup" type="button" class="btn" onclick="closeSignup()">Close</button>
         </form>
     </div>
 

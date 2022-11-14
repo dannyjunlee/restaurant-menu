@@ -30,6 +30,14 @@ function closeCart() {
   document.getElementById("cartContainer").style.display = "none";
 }
 
+function favorite() {
+  let heart = document.querySelector("fave");
+  if (heart.style.color = "black") {
+    heart.setAttribute("style.color", "red")
+  } else {
+  }
+}
+
 
 // // geolocation (To be added in future)
 

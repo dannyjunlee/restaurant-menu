@@ -12,21 +12,10 @@
     <header>
         <img id="logo" src="../../images/lucarioslogo.png" alt="Lucario's" style="width:65vw; height:auto;">
         <p id="restinfo">123 Pokeball Street - Viridian City, Kanto<br> 555-555-5555</p>
-
         <section class="actionCenterContainer">
             {{>login}}
         </section>
     </header>
-    {{!-- <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            {{#if loggedIn}}
-            <li <a href='#' id="logout" class="btn-no-style">Logout</a></li>
-            {{else}}
-            <li><a href="/login">Login</a></li>
-            {{/if}}
-            <ul>
-    </nav> --}}
     <main>
         {{{body}}}
     </main>

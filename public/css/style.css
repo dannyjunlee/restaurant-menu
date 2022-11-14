@@ -135,7 +135,7 @@ h2:hover {
     padding-right: 40px;
 }
 
-.cart{
+.cart {
     color: black;
     border: 5px solid red;
     box-shadow: 5px 5px 5px gray;
@@ -188,7 +188,8 @@ h2:hover {
 }
 
 .open-button,
-.cart-button {
+.cart-button,
+.logout-button {
     background-color: black;
     font-family: poke, Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -273,42 +274,47 @@ label {
 }
 
 .row {
-    display: -ms-flexbox; /* IE10 */
+    display: -ms-flexbox;
+    /* IE10 */
     display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
+    -ms-flex-wrap: wrap;
+    /* IE10 */
     flex-wrap: wrap;
     margin: 0 -16px;
 }
-  
+
 .col-25 {
-    -ms-flex: 25%; /* IE10 */
+    -ms-flex: 25%;
+    /* IE10 */
     flex: 25%;
     font-size: 14px;
 }
-  
+
 .col-50 {
-    -ms-flex: 50%; /* IE10 */
+    -ms-flex: 50%;
+    /* IE10 */
     flex: 50%;
 }
-  
+
 .col-75 {
-    -ms-flex: 75%; /* IE10 */
+    -ms-flex: 75%;
+    /* IE10 */
     flex: 75%;
 }
-  
+
 .col-25,
 .col-50,
 .col-75 {
     padding: 0 16px;
 }
-  
+
 .container {
     background-color: #f2f2f2;
     padding: 5px 20px 15px 20px;
     border: 1px solid lightgrey;
     border-radius: 3px;
 }
-  
+
 input[type=text] {
     width: 100%;
     margin-bottom: 20px;
@@ -316,27 +322,27 @@ input[type=text] {
     border: 1px solid #ccc;
     border-radius: 3px;
 }
-  
+
 label {
     margin-bottom: 10px;
     display: block;
 }
-  
+
 .icon-container {
     margin-bottom: 20px;
     padding: 7px 0;
     font-size: 24px;
 }
-  
+
 a {
     color: red;
     text-decoration: none;
 }
-  
+
 hr {
     border: 1px solid lightgrey;
 }
-  
+
 span.price {
     float: right;
     color: grey;
@@ -354,23 +360,60 @@ span.price {
     opacity: 0.8;
 }
 
-#closeCartBtn {
-    background-color: red;
-    color: white;
-    padding: 16px 20px;
-    border: 2px solid black;
-    cursor: pointer;
-    margin-bottom: 10px;
-    opacity: 0.8;
-    width: 85%;
-}
-
 .col-50 input {
     width: 90%;
     padding: 15px;
     margin: 0 0 22px 0;
     border: none;
 }
+
+/* QUANTITY BUTTONS STUFF */
+
+.quantity {
+    float: right;
+    width: 200px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.minusBtn,
+.plusBtn {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+
+.minusBtn:hover,
+.plusBtn:hover {
+    background-color: red;
+    border: none;
+    cursor: pointer;
+}
+
+.numberPlace {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.submitBtn {
+    margin-left: 13px;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 30px;
+}
+
+.submitBtn:hover {
+    background-color: red;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+footer {
+    color: white;
+}
+
+
+/* MEDIA SCREEN STUFF */
 
 @media screen and (min-width: 1800px) {
     header {
@@ -414,8 +457,13 @@ span.price {
         align-items: center;
         width: 80vw;
         margin-top: 20px;
+        margin-left: 0;
     }
-    
+
+    .actionCenter {
+        margin-left: 0;
+    }
+
     #restinfo {
         margin: 20px;
     }
@@ -438,7 +486,8 @@ span.price {
     }
 
     .open-button,
-    .cart-button {
+    .cart-button,
+    .logout-button {
         background-color: black;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 12px;
@@ -452,54 +501,21 @@ span.price {
         width: 100px;
         height: 30px;
     }
+
     .form-container {
         display: inline;
     }
+
     #login-form,
     #signupBtn,
     #closeBtn {
         width: 100px;
     }
-}
 
-#mainDiv {
-    margin: 0px;
-    align-content: right;
+    .quantity {
+        float: none;
+        display: block;
+        width: 200px;
+        font-size: 12px;
+    }
 }
-
-#minus,
-#plus {
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-}
-
-#minus:hover {
-    background-color: red;
-    border: none;
-}
-
-#plus:hover {
-    background-color: blue;
-    border: none;
-}
-
-#numberPlace {
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-#submit {
-    border: none;
-    height: 25px;
-}
-
-#submit:hover {
-    background-color: red;
-    border: 1px solid black;
-    cursor: pointer;
-}
-
-/* #bottom {
-    margin-top: 90%;
-} */

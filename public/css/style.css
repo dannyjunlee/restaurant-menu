@@ -188,7 +188,8 @@ h2:hover {
 }
 
 .open-button,
-.cart-button {
+.cart-button
+.logout-button {
     background-color: black;
     font-family: poke, Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -503,3 +504,7 @@ span.price {
 /* #bottom {
     margin-top: 90%;
 } */
+
+footer {
+    color: white;
+}

@@ -17,7 +17,7 @@ function closeForm() {
 
 function signIn() {
   document.getElementById("myForm").style.display = "none";
-  document.getElementById("openButton").innerHTML = "Logged In";
+  loginBtn.innerHTML = "Logged In";
 }
 
 function openCart() {

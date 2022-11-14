@@ -1,5 +1,6 @@
 const router = require('express').Router();
 
+//Get cart
 router.get('/', (req, res) => {
     if (!req.session.cart) {
         req.session.cart = {};
@@ -8,6 +9,7 @@ router.get('/', (req, res) => {
     res.status(200).json(req.session.cart);
 })
 
+//Update cart data
 router.put('/', (req, res) => {
     if (!req.session.cart) req.session.cart = {};
     const cart = req.session.cart;
@@ -25,6 +27,8 @@ router.put('/', (req, res) => {
     res.json(cart);
 });
 
+
+// clear cart data
 router.delete('/', (req, res) => {
     req.session.cart = {};
     res.status(200).json({ msg: "cleared cart" });

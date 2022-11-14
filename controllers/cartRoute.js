@@ -7,22 +7,22 @@ router.get('/', (req, res) => {
 
     // query the database for the Cart
 
-    let cart = [{ id: 2, food: "Soup", price: 6.00, quantity: 2},
-                { id: 5, food: "Tea", price: 4.00, quantity: 1}]
+    let cart = [{ id: 2, dish: "Soup", price: 6.00, quantity: 2},
+                { id: 5, dish: "Tea", price: 4.00, quantity: 1}]
 
     // filter the data from the database
 
     res.render('carts', { cartitems: cart, total_price: "$16" })
 })
 
-router.get('/fetchproducts/:check', function (req, res) {
-    product.find({inventory_count: {$food: 0}}, function (err, products) {
-        res.render("displayProducts", {productsForDisplay: products});
+router.get('/fetchdish/:check', function (req, res) {
+    dish.findAll({inventory_count: {$dish: 0}}, function (err, dish) {
+        res.render("displayDish");
     })
 })
-router.get('/fetchproducts', function (req, res) {
-    product.find({}, function (err, prod) {
-        res.render('displayProducts', {productsForDisplay: prod})
+router.get('/fetchdish', function (req, res) {
+    dish.findOne({}, function (err, prod) {
+        res.render('displayDish')
     })
 })
 router.post('/updatecart', function (req, res) {
@@ -38,9 +38,9 @@ router.post('/updatecart', function (req, res) {
             name: cartitem.name,
             quantity: quant
         }
-        ar.push(cartstoreitem);
+        cart.push(cartstoreitem);
         cartitem.quantity = parseInt(req.body[cartitem.name]);
-        product.find({name: cartitem.name}, function (err, result) {
+        dish.findAll({name: cartitem.name}, function (err, result) {
             return result
         })
         .then
@@ -71,9 +71,9 @@ router.post('/updatecart', function (req, res) {
         })
     })
 })
-router.get('/cart/clear', function (req, res) {
+router.get('/clear', function (req, res) {
     req.session.cart = null;
-    res.render('emptycart');
+    // res.render('carts');
 })
 
 

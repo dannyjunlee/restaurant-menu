@@ -9,7 +9,7 @@ const loginBtn = document.getElementById('openButton')
 //get the entire action center
 const actionCenterEl = document.getElementById('actionCenter');
 //get the close button
-const closeBtn = doument.getElementById('closeBtn')
+const closeBtn = document.getElementById('closeBtn')
 
 // Function to show the modal when the sign in button is clicked and hide the sign in button
 function openForm() {

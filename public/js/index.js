@@ -9,6 +9,14 @@ function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
 
+function openSignup() {
+  document.getElementById("signupForm").style.display = "inline";
+}
+
+function closeSignup() {
+  document.getElementById("signupForm").style.display = "none";
+}
+
 function signIn() {
   document.getElementById("myForm").style.display = "none";
   loginBtn.innerHTML = "Logged In";

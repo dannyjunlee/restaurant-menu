@@ -24,7 +24,4 @@ Cart.init(
 )
 
 
-
-
-
 module.exports = Cart;

@@ -1,9 +1,18 @@
 <section>
     <h2>Desserts</h2>
     <ul class="dessert_list">
-    {{#each desserts as |dish|}}
-    <li class="itemName">{{dish.dish_name}} ${{dish.dish_price}}</li>
-    <p class="itemDesc">{{dish.dish_description}}</p>
-    {{/each}}
+        {{#each desserts as |dish|}}
+        <li class="itemName">{{dish.dish_name}} ${{dish.dish_price}}</li>
+        <p class="itemDesc">{{dish.dish_description}}</p>
+        <aside>
+            <div id="mainDiv">
+                <button id="minus">-</button>
+                <span id="numberPlace">0</span>
+                <button id="plus">+</button>
+            </div>
+            <button id="submit">Submit</button>
+            <p id="bottom"></p><!-- for show all page -->
+        </aside>
+        {{/each}}
     </ul>
 </section>

@@ -135,6 +135,14 @@ h2:hover {
     padding-right: 40px;
 }
 
+.cart{
+    color: black;
+    border: 5px solid red;
+    box-shadow: 5px 5px 5px gray;
+    padding: 10px;
+    background: white;
+}
+
 .appetizer_list li,
 .entree_list li,
 .dessert_list li,
@@ -176,6 +184,7 @@ h2:hover {
     box-shadow: 5px 5px 5px gray;
     padding: 10px;
     background: white;
+    width: 90%;
 }
 
 .open-button,
@@ -345,6 +354,24 @@ span.price {
     opacity: 0.8;
 }
 
+#closeCartBtn {
+    background-color: red;
+    color: white;
+    padding: 16px 20px;
+    border: 2px solid black;
+    cursor: pointer;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    width: 85%;
+}
+
+.col-50 input {
+    width: 90%;
+    padding: 15px;
+    margin: 0 0 22px 0;
+    border: none;
+}
+
 @media screen and (min-width: 1800px) {
     header {
         float: left;
@@ -381,6 +408,14 @@ span.price {
 }
 
 @media screen and (max-width: 700px) {
+    .actionCenterContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 80vw;
+        margin-top: 20px;
+    }
+    
     #restinfo {
         margin: 20px;
     }
@@ -417,4 +452,54 @@ span.price {
         width: 100px;
         height: 30px;
     }
+    .form-container {
+        display: inline;
+    }
+    #login-form,
+    #signupBtn,
+    #closeBtn {
+        width: 100px;
+    }
 }
+
+#mainDiv {
+    margin: 0px;
+    align-content: right;
+}
+
+#minus,
+#plus {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+
+#minus:hover {
+    background-color: red;
+    border: none;
+}
+
+#plus:hover {
+    background-color: green;
+    border: none;
+}
+
+#numberPlace {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#submit {
+    border: none;
+    height: 25px;
+}
+
+#submit:hover {
+    background-color: red;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+/* #bottom {
+    margin-top: 90%;
+} */

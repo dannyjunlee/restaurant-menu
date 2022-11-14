@@ -4,17 +4,16 @@
         {{#each desserts as |dish|}}
         <li>
             <span class="dishName">{{dish.dish_name}}</span> <span class="dishPrice">${{dish.dish_price}}</span>
+            <aside class="quantity">
+                <div class="buttonDiv">
+                    <button class='minusBtn'>-</button>
+                    <span class="numberPlace">0</span>
+                    <button class="plusBtn">+</button>
+                    <button class="submitBtn">add</button>
+                </div>
+            </aside>
         </li>
         <p class="itemDesc">{{dish.dish_description}}</p>
-        <aside>
-            <div class="buttonDiv">
-                <button class='minusBtn'>-</button>
-                <span class="numberPlace">0</span>
-                <button class="plusBtn">+</button>
-            </div>
-            <button class="submitBtn">Submit</button>
-            <p id="bottom"></p><!-- for show all page -->
-        </aside>
         {{/each}}
     </ul>
 </section>

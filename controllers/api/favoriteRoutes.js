@@ -20,4 +20,10 @@ router.post('/:dish_id', async (req, res) => {
     }
 });
 
+// delete favorite
+
+// router.delete('/:dish_id', async (req, res) => {
+//     try
+// })
+
 module.exports = router;

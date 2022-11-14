@@ -129,29 +129,4 @@ router.post('/logout', (req, res) => {
     }
 });
 
-
-// add favorite dish
-router.put('/favorite/:dish_id', async (req, res) => {
-    try {
-        console.log(req.session)
-        const user = await User.findByPk(req.session.user_id);
-        const dish = await Dish.findByPk(req.params.dish_id);
-
-console.log(user);
-console.log(user.addDish)
-
-        await user.addDish(dish, {through: 'UserDish'});
-    
-
-        if (!req.session.loggedIn) {
-            res.status(404).json({ message: 'You must be logged in to add a dish to your favorites' });
-            return
-        }
-        res.status(200).json({message: `${user.username} has successfully added ${dish.dish_name} to their favorites`});
-    } catch (err) {
-        res.status(500).json(err);
-        console.log(err);
-    }
-});
-
 module.exports = router;

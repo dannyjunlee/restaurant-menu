@@ -408,6 +408,17 @@ span.price {
     cursor: pointer;
 }
 
+.fave {
+    background: none;
+    border: none;
+}
+
+.fave:hover {
+    color: red;
+    box-shadow: 5px 5px 5px gray;
+    cursor: pointer;
+}
+
 footer {
     color: white;
 }

@@ -1,4 +1,5 @@
-
+const dishNames = document.getElementsByClassName("dishName");
+const dishPrices = document.getElementsByClassName("dishPrice");
 const minusBtns = document.getElementsByClassName("minusBtn");
 const plusBtns = document.getElementsByClassName("plusBtn");
 const nums = document.getElementsByClassName("numberPlace");
@@ -36,41 +37,6 @@ for (let i = 0; i < minusBtns.length; i++) {
         }
     }
     submitBtns[i].onclick = function () {
-        alert("you choice : " + number);
+        alert(`you choice of ${dishNames[i]} ${number}\n ${dishPrices[i]}`);
     }
-}
-
-// minusBtn.forEach((btn) => {
-//     btn.onclick = function () {
-//         if (number > min) {
-//             number = number - 1; /// Minus 1 of the number
-//             num.innerHTML = `${number}`; /// Display the value in place of the number
-
-//         }
-//         if (number == min) {
-//             num.style.color = "red";
-//             setTimeout(function () { num.style.color = "black" }, 500)
-//         }
-//         else {
-//             num.style.color = "black";
-//         }
-//     }
-// });
-// plusBtn.onclick = function () {
-//     if (number < max) {
-//         number = number + 1;
-//         num.innerHTML = number; /// Display the value in place of the number
-//     }
-//     if (number == max) {
-//         setTimeout(function () { num.style.color = "black" }, 500)
-//     }
-//     else {
-//         num.style.color = "black";
-//     }
-
-
-// }
-
-submitBtn.onclick = function () {
-    alert("you choice : " + number);
 }

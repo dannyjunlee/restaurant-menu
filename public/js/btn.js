@@ -38,21 +38,27 @@ for (let i = 0; i < minusBtns.length; i++) {
     }
     submitBtns[i].onclick = function () {
         let dishName = dishNames[i].textContent;
-        const totalPrice = (parseInt(dishPrices[i].textContent.slice(1)) * number);
-        alert(`You added ${number} ${dishName} \n Total:$${totalPrice}`);
-        // const data = { dishName, totalPrice }
-        // fetch('/api/cartRoutes', {
-        //     method: 'POST',
-        //     headers: {
-        //     },
-        //     body: JSON.stringify(data),
+        const price = parseInt(dishPrices[i].textContent.slice(1));
+        const totalPrice = (price * number);
+        //    alert(`You added ${number} ${dishName} \n Total:$${totalPrice}`);
+        const data = { dishName, number, price }
+        // fetch('/api/cart/', {
+        //     method: 'DELETE'
         // })
-        //     .then((response) => response.json())
-        //     .then((data) => {
-        //         console.log('successfully added stuff to cart', data);
-        //     })
-        //     .catch((error) => {
-        //         console.log('Error', error);
-        //     });
+        fetch('/api/cart/', {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log('successfully added stuff to cart');
+                console.log(data);
+            })
+            .catch((error) => {
+                console.log('Error', error);
+            });
     }
 }

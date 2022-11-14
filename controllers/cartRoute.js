@@ -1,5 +1,5 @@
 const router = require('express').Router();
-//const { Dish } = require('../../models');
+// const { Dish } = require('../../models');
 
 // all routes are prefixed with '/cart'
 router.get('/', (req, res) => {
@@ -7,8 +7,8 @@ router.get('/', (req, res) => {
 
     // query the database for the Cart
 
-    let cart = [{ id: 2, dish: "Soup", price: 6.00, quantity: 2},
-                { id: 5, dish: "Tea", price: 4.00, quantity: 1}]
+    let cart = [{ id: 2, dish: "Soup", price: 6.00, quantity: 2 },
+    { id: 5, dish: "Tea", price: 4.00, quantity: 1 }]
 
     // filter the data from the database
 
@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/fetchdish/:check', function (req, res) {
-    dish.findAll({inventory_count: {$dish: 0}}, function (err, dish) {
+    dish.findAll({ inventory_count: { $dish: 0 } }, function (err, dish) {
         res.render("displayDish");
     })
 })
@@ -26,12 +26,12 @@ router.get('/', function (req, res) {
     })
 })
 router.post('/updatecart', function (req, res) {
-    console.log("the Session" , req.session)
+    console.log("the Session", req.session)
     let testCheck = false;
     let counter = 0;
-    let cartinf = req.session.cart || {dish:[]};
+    let cartinf = req.session.cart || { dish: [] };
     let cart = [];
-    
+
     cartinf.dish.forEach(function (cartitem, count) {
         const difference = req.body[cartitem.name] - cartitem.quantity;
         quant = cartitem.quantity;
@@ -41,23 +41,23 @@ router.post('/updatecart', function (req, res) {
         }
         cart.push(cartstoreitem);
         cartitem.quantity = parseInt(req.body[cartitem.name]);
-        dish.findAll({name: cartitem.name}, function (err, result) {
+        dish.findAll({ name: cartitem.name }, function (err, result) {
             return result
         })
-        .then
-        // no item
-        (function(result) {
-            if (req.body[cartitem.name] == 0) {
-                let updQuantity;
-                for (let i = 0; i < cart.length; i++) {
-                    if (cartitem.name == cart[i].name)
-                        updQuantity = cart[i].quantity;
+            .then
+            // no item
+            (function (result) {
+                if (req.body[cartitem.name] == 0) {
+                    let updQuantity;
+                    for (let i = 0; i < cart.length; i++) {
+                        if (cartitem.name == cart[i].name)
+                            updQuantity = cart[i].quantity;
 
-                }
-                cartinf.total_price -= updQuantity * cartitem.price;
-                cartinf.items.splice(count - counter, 1);
-                counter++;
-                testCheck = true;
+                    }
+                    cartinf.total_price -= updQuantity * cartitem.price;
+                    cartinf.items.splice(count - counter, 1);
+                    counter++;
+                    testCheck = true;
                 }
                 // quantity decrease total decrease
                 else if (difference < 0) {
@@ -69,7 +69,7 @@ router.post('/updatecart', function (req, res) {
                     cartinf.total_price += (difference) * cartitem.price;
                     cartinf.total_price = Math.round(cartinf.total_price * 100) / 100;
                 }
-        })
+            })
     })
 })
 router.get('/clear', function (req, res) {

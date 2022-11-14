@@ -82,11 +82,8 @@ router.delete('/:id', async (req, res) => {
 // login
 
 router.post('/login', async (req, res) => {
-    
-    let dbUserData;
-    
     try {
-        dbUserData = await User.findOne({
+        const dbUserData = await User.findOne({
             where: { email: req.body.email }
         });
 

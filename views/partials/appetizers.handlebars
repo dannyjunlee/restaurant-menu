@@ -2,10 +2,12 @@
     <h2>Appetizers</h2>
     <ul class="appetizer_list">
         {{#each appetizers as |dish|}}
-        <li><span class="dishName">{{dish.dish_name}}</span> <span class="dishPrice">${{dish.dish_price}}</span></li>
+        <li>
+            <span class="dishName">{{dish.dish_name}}</span> <span class="dishPrice">${{dish.dish_price}}</span>
+        </li>
         <p class="itemDesc">{{dish.dish_description}}</p>
         <aside>
-            <div id="mainDiv">
+            <div class="buttonDiv">
                 <button class='minusBtn'>-</button>
                 <span class="numberPlace">0</span>
                 <button class="plusBtn">+</button>

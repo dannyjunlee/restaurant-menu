@@ -14,7 +14,7 @@ const loginFormHandler = async (event) => {
         if (response.ok) {
             window.location.replace('/');
         } else {
-            alert('Failed to log in.');
+            alert('Failed to login');
         }
     }
 };
@@ -36,7 +36,7 @@ const signupFormHandler = async (event) => {
         if (response.ok) {
             window.location.replace('/');
         } else {
-            alert('Failed to sign up.');
+            alert('Failed to sign up');
         }
     }
 };

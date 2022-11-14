@@ -1,4 +1,4 @@
-<div class="actionCenter">
+<div class="actionCenter" id="actionCenter">
     <button class="open-button" id="openButton" onclick="openForm()">Sign In</button>
 
     <div class="form-popup" id="myForm">
@@ -12,8 +12,8 @@
             <input type="password" placeholder="Enter Password" name="psw" required>
 
             <button id="login-form" type="submit" class="btn" onclick="signIn()">Login</button>
-            <button type="button" class="btn" onclick="closeForm()">Close</button>
-            <button type="button" class="btn" onclick="closeForm()">Sign Up</button>
+            <button id='closeBtn' type="button" class="btn" onclick="closeForm()">Close</button>
+            <button id='signupBtn' type="button" class="btn" onclick="closeForm()">Sign Up</button>
         </form>
     </div>
 </div>

@@ -2,6 +2,18 @@ const router = require('express').Router();
 const { Favorite, Dish, User } = require('../../models');
 
 
+// get favorites for current user
+
+router.get('/', async (req, res) => {
+    const favData = await Favorite.findAll({
+        where: {
+            user_id: req.session.user_id,
+        },
+    }).catch((err) => {
+        res.json(err);
+    });
+    res.json(favData);
+});
 
 
 // add new favorite

@@ -141,8 +141,7 @@ router.put('/favorite/:dish_id', async (req, res) => {
 console.log(user);
 console.log(user.addDish)
 
-        const test = await user.addDish(dish, {through: UserDish});
-        console.log(test);
+        await user.addDish(dish, {through: 'UserDish'});
     
 
         if (!req.session.loggedIn) {
@@ -152,6 +151,7 @@ console.log(user.addDish)
         res.status(200).json({message: `${user.username} has successfully added ${dish.dish_name} to their favorites`});
     } catch (err) {
         res.status(500).json(err);
+        console.log(err);
     }
 });
 

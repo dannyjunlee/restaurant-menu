@@ -55,9 +55,13 @@ function signIn() {
 
 // geolocation
 
+let inRange
+
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
+    inRange = navigator.geolocation.getCurrentPosition(checkPosition);
+    return
   } else {
     console.log("Navigation not supported by this browser")
   }
@@ -66,6 +70,10 @@ function getLocation() {
 function showPosition(position) {
   console.log("Latitude: " + position.coords.latitude +
   "Longitude: " + position.coords.longitude);
+}
+
+function checkPosition(position) {
+  
 }
 
 getLocation()

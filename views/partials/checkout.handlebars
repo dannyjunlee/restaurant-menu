@@ -1,12 +1,12 @@
 <table class="checkout">
     <tr>
-        <td> name </td>
+        <td> dish </td>
         <td> price </td>
         <td> quantity</td>
     </tr>
 {{#each checkoutitem}}
 <tr>
-        <td> {{name}} </td>
+        <td> {{dish}} </td>
         <td>  {{price}} </td>
         <td>  {{quantity}} </td>
 </tr>
@@ -16,5 +16,5 @@
 <div id="totalPrice">
 Total Price is {{total_price}} <br>
 
-<a href="/fetchproducts"> Click here to go back to the products page </a>
+<a href="/fetchfood"> Click here to go back to the products page </a>
 </div>

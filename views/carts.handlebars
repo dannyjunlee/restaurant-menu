@@ -1,5 +1,5 @@
 <button id="clearCart"> Clear Cart</button>
-<a href="/fetchproducts" > Click here to add more food</a>
+<a href="/fetchdish" > Click here to add more food</a>
 <form method="POST" action="/updatecart">
     <table>
         <tr>
@@ -10,7 +10,7 @@
 {{#each cartitems}}
     <tr>
     <tr>
-    <td> {{food}} </td>
+    <td> {{dish}} </td>
     <td>  {{price}} </td>
     <td> <input type="text" name="{{food}}" value="{{quantity}}" > </td>
     </tr>

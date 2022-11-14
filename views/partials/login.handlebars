@@ -11,13 +11,13 @@
             <label for="psw"><b>Password</b></label>
             <input type="password" id="password-login" placeholder="Enter Password" name="psw" required>
 
-            <button id="login-form" type="submit" class="btn" onclick="signIn()">Login</button>
+            <button id="login-form" type="submit" class="btn">Login</button>
             <button id='signupBtn' type="button" class="btn" onclick="closeForm()">Sign Up</button>
             <button id='closeBtn' type="button" class="btn" onclick="closeForm()">Close</button>
         </form>
 </div>
 
-<button class="cart-button" id="cart-button" onclick="openCart()">Cart</button>
+<button class="cart-button" id="cart-button">Cart</button>
 
 <div class="row" id="cartContainer">
     <div class="col-75">
@@ -87,11 +87,8 @@
         <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
         </div>
     </div>
-    <button id='closeBtn' type="button" class="btn" onclick="closeCart()">Close</button>
 </div>
 
 </aside>
-
-
 
 <script src="./js/login.js"></script>

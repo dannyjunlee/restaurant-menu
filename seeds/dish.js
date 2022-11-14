@@ -69,7 +69,7 @@ const dishdata = [
   },
   {
     dish_type: 'Dessert',
-    dish_name: 'Masrsh-Marill Pudding',
+    dish_name: 'Marsh-Marill Pudding',
     dish_description: 'Flaaffy, spongey, and Drizzile-d with Goomy caramel',
     dish_price: 10.00
   },

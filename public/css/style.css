@@ -188,7 +188,8 @@ h2:hover {
 }
 
 .open-button,
-.cart-button {
+.cart-button,
+.logout-button {
     background-color: black;
     font-family: poke, Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -359,23 +360,60 @@ span.price {
     opacity: 0.8;
 }
 
-#closeCartBtn {
-    background-color: red;
-    color: white;
-    padding: 16px 20px;
-    border: 2px solid black;
-    cursor: pointer;
-    margin-bottom: 10px;
-    opacity: 0.8;
-    width: 85%;
-}
-
 .col-50 input {
     width: 90%;
     padding: 15px;
     margin: 0 0 22px 0;
     border: none;
 }
+
+/* QUANTITY BUTTONS STUFF */
+
+.quantity {
+    float: right;
+    width: 200px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.minusBtn,
+.plusBtn {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+
+.minusBtn:hover,
+.plusBtn:hover {
+    background-color: red;
+    border: none;
+    cursor: pointer;
+}
+
+.numberPlace {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.submitBtn {
+    margin-left: 13px;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 30px;
+}
+
+.submitBtn:hover {
+    background-color: red;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+footer {
+    color: white;
+}
+
+
+/* MEDIA SCREEN STUFF */
 
 @media screen and (min-width: 1800px) {
     header {
@@ -419,6 +457,11 @@ span.price {
         align-items: center;
         width: 80vw;
         margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .actionCenter {
+        margin-left: 0;
     }
 
     #restinfo {
@@ -443,7 +486,8 @@ span.price {
     }
 
     .open-button,
-    .cart-button {
+    .cart-button,
+    .logout-button {
         background-color: black;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 12px;
@@ -467,47 +511,11 @@ span.price {
     #closeBtn {
         width: 100px;
     }
-}
 
-.buttonDiv {
-    margin: 0px;
-    float: right 20px;
+    .quantity {
+        float: none;
+        display: block;
+        width: 200px;
+        font-size: 12px;
+    }
 }
-
-.minusBtn,
-.plusBtn {
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-}
-
-.minusBtn:hover {
-    background-color: red;
-    border: none;
-}
-
-.plusBtn:hover {
-    background-color: blue;
-    border: none;
-}
-
-.numberPlace {
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.submitBtn {
-    margin-left: 13px;
-    border: none;
-    height: 30px;
-}
-
-.submitBtn:hover {
-    background-color: red;
-    border: 1px solid black;
-    cursor: pointer;
-}
-
-/* #bottom {
-    margin-top: 90%;
-} */

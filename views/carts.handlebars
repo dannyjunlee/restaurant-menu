@@ -5,19 +5,19 @@
         <tr>
             <td> dish </td>
             <td> price </td>
-            <td> quantity</td>
+            <td> quantity </td>
         </tr>
 {{#each cartitems}}
     <tr>
     <tr>
-    <td> {{dish}} </td>
-    <td>  {{price}} </td>
-    <td> <input type="text" name="{{dish}}" value="{{quantity}}" > </td>
+    <td> {{dishName}} </td>
+    <td>  {{dishPrice}} </td>
+    <td> <input type="text" name="{{dishName}}" value="{{number}}" > </td>
     </tr>
 {{/each}}
     </table>
     <div id="footer" class="cart">
-Total Price is {{total_price}} <br>
+Total Price is {{totalPrice}} <br>
 <button type="submit"> Update Cart </button>
 {{#if checkout }}
 <button type="button" onclick="passEvent(event)" id="checkout"> Checkout</button>

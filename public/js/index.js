@@ -50,36 +50,36 @@ function closeCart() {
 // }
 
 
-// geolocation
+// // geolocation (To be added in future)
 
-let inRange
+// let inRange
 
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-    inRange = navigator.geolocation.getCurrentPosition(checkPosition);
-    return
-  } else {
-    console.log("Navigation not supported by this browser")
-  }
-}
+// function getLocation() {
+//   if (navigator.geolocation) {
+//     navigator.geolocation.getCurrentPosition(showPosition);
+//     inRange = navigator.geolocation.getCurrentPosition(checkPosition);
+//     return
+//   } else {
+//     console.log("Navigation not supported by this browser")
+//   }
+// }
 
-function showPosition(position) {
-  console.log("Latitude: " + position.coords.latitude +
-  "Longitude: " + position.coords.longitude);
-}
+// function showPosition(position) {
+//   console.log("Latitude: " + position.coords.latitude +
+//   "Longitude: " + position.coords.longitude);
+// }
 
-function checkPosition(position) {
+// function checkPosition(position) {
 
-}
+// }
 
-getLocation()
-document.getElementById("cart-button").addEventListener("click", function() {
-  console.log(document.getElementById("cartContainer").style.display);
-  if (document.getElementById("cartContainer").style.display === "none") {
-    openCart();
-  }
-  else {
-    closeCart();
-  }
-});
+// getLocation()
+// document.getElementById("cart-button").addEventListener("click", function() {
+//   console.log(document.getElementById("cartContainer").style.display);
+//   if (document.getElementById("cartContainer").style.display === "none") {
+//     openCart();
+//   }
+//   else {
+//     closeCart();
+//   }
+// });

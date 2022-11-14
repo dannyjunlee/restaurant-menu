@@ -1,9 +1,8 @@
 const router = require('express').Router();
 const { Dish, Review, User } = require('../models');
-const withAuth = require('../utils/auth');
 
 // GET route for homepage
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         const dishData = await Dish.findAll({
             include: [{ model: Review }]

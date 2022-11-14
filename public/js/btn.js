@@ -37,6 +37,22 @@ for (let i = 0; i < minusBtns.length; i++) {
         }
     }
     submitBtns[i].onclick = function () {
-        alert(`you choice of ${dishNames[i]} ${number}\n ${dishPrices[i]}`);
+        let dishName = dishNames[i].textContent;
+        const totalPrice = (parseInt(dishPrices[i].textContent.slice(1)) * number);
+        alert(`You added ${number} ${dishName} \n Total:$${totalPrice}`);
+        // const data = { dishName, totalPrice }
+        // fetch('/api/cartRoutes', {
+        //     method: 'POST',
+        //     headers: {
+        //     },
+        //     body: JSON.stringify(data),
+        // })
+        //     .then((response) => response.json())
+        //     .then((data) => {
+        //         console.log('successfully added stuff to cart', data);
+        //     })
+        //     .catch((error) => {
+        //         console.log('Error', error);
+        //     });
     }
 }

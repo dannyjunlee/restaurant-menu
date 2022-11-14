@@ -2,7 +2,7 @@ const User = require('./User');
 const Dish = require('./Dish');
 const Review = require('./Review');
 const Cart = require('./Cart');
-const Favorite = require( './Favorite');
+const Favorite = require('./Favorite');
 
 Dish.hasMany(Review, {
     foreignKey: 'dish_id',
@@ -26,7 +26,7 @@ Cart.belongsTo(User, {
     foreignKey: 'user_id',
 });
 
-Dish.belongsToMany(User, {through: Favorite});
-User.belongsToMany(Dish, {through: Favorite});
+Dish.belongsToMany(User, { through: Favorite, uniqueKey: 'dish_id' });
+User.belongsToMany(Dish, { through: Favorite, uniqueKey: 'user_id' });
 
 module.exports = { User, Dish, Review , Cart, Favorite };

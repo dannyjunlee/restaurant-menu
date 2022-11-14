@@ -111,6 +111,6 @@ const dishdata = [
   },
 ];
 
-const seedDish = () => Dish.bulkCreate(dishdata);
+const seedDish = async () => await Dish.bulkCreate(dishdata);
 
 module.exports = seedDish;

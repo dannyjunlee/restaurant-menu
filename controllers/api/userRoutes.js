@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User, Dish } = require('../../models');
 const bcrypt = require('bcrypt');
+const withAuth = require('../../utils/auth');
 
 // get all users
 router.get('/', async (req, res) => {
@@ -119,7 +120,7 @@ router.post('/login', async (req, res) => {
 });
 
 // logout
-router.post('/logout', (req, res) => {
+router.post('/logout', withAuth, (req, res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {
             res.status(204).end();
@@ -131,7 +132,7 @@ router.post('/logout', (req, res) => {
 
 
 // add favorite dish
-router.put('/favorite/:dish_id', async (req, res) => {
+router.put('/favorite/:dish_id', withAuth, async (req, res) => {
     try {
         const user = await User.findByPk(req.session.user_id);
         const dish = await Dish.findByPk(req.params.dish_id);

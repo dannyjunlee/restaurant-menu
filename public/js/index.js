@@ -23,9 +23,9 @@ function signIn() {
 }
 
 
-function closeCart() {
-  document.getElementById("cartContainer").style.display = "none";
-}
+// function closeCart() {
+//   document.getElementById("cartContainer").style.display = "none";
+// }
 
 function favorite() {
   let heart = document.querySelector("fave");

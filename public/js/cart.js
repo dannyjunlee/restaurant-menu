@@ -20,16 +20,18 @@ async function renderCart() {
     // console.log(results);
     for (let i = 0; i < results.length; i++) {
         console.log(results[i], 'from loop');
-        // console.log(results[i][0]);
+        const cartName = JSON.stringify(results[i][0]);
+        console.log(cartName);
         const p = document.createElement('p')
-        const a = document.createElement('a').setAttribute('href', "#");
+        const a = document.createElement('a')
+                // .setAttribute('href', "#");
         const span = document.createElement('span');
-        for (var key in results) {
-            if (results.hasOwnProperty(key)) {
-                console.log(key + " -> " + results[key]);
-            }
-        }
-        a.innerHTML = results[key];
+        // for (var key in results) {
+        //     if (results.hasOwnProperty(key)) {
+        //         console.log(key + " -> " + results[key]);
+        //     }
+        // }
+        a.append(cartName);
         // a.textContent = json.stringify(results[i][0]);
         span.textContent = results[i].price;
         p.append(a, span);

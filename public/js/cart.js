@@ -30,8 +30,8 @@ async function renderCart() {
         span.textContent = results[i].price;
         p.append(a, span);
         cartCon.append(p);
-        document.getElementById("cartContainer").style.display = "block";
-    }
+    };
+    document.getElementById("cartContainer").style.display = "inline";
 };
 
 

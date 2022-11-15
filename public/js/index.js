@@ -22,6 +22,9 @@ function signIn() {
   loginBtn.innerHTML = "Logged In";
 }
 
+function openCart() {
+  document.getElementById("cartContainer").style.display = "inline";
+}
 
 function closeCart() {
   document.getElementById("cartContainer").style.display = "none";

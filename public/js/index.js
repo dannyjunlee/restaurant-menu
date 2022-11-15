@@ -1,3 +1,4 @@
+
 // Get the <span> element that closes the modal
 const span = document.getElementsByClassName("close")[0];
 
@@ -22,7 +23,6 @@ function signIn() {
   loginBtn.innerHTML = "Logged In";
 }
 
-
 function closeCart() {
   document.getElementById("cartContainer").style.display = "none";
 }
@@ -34,6 +34,12 @@ function favorite() {
   } else {
   }
 }
+
+// document.getElementById('openButton').addEventListener('click', openForm);
+// document.getElementById('signinCloseBtn').addEventListener('click', closeForm);
+// document.getElementById('signupButton').addEventListener('click', openSignup);
+// document.getElementById('signupCloseBtn').addEventListener('click', closeSignup);
+// document.getElementById('cart-button').addEventListener('click', renderCart);
 
 
 // // geolocation (To be added in future)

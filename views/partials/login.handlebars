@@ -1,5 +1,5 @@
 <div class="actionCenter" id="actionCenter">
-    <button class="open-button" id="openButton" onclick="openForm()">Sign In</button>
+    <button class="open-button" id="openButton">Sign In</button>
 
     <div class="form-popup" id="myForm">
         <form action="/" class="form-container">
@@ -12,11 +12,11 @@
             <input type="password" id="password-login" placeholder="Enter Password" name="psw" required>
 
             <button id="login-form" type="submit" class="btn">Login</button>
-            <button id='closeBtn' type="button" class="btn" onclick="closeForm()">Close</button>
+            <button id='signinCloseBtn' type="button" class="btn">Close</button>
         </form>
     </div>
 
-    <button class="open-button" id="signupButton" onclick="openSignup()">Sign Up</button>
+    <button class="open-button" id="signupButton">Sign Up</button>
 
     <div class="form-popup" id="signupForm">
         <form action="/" class="form-container">
@@ -33,11 +33,11 @@
 
             <button id='signupBtn' type="button" class="btn">Sign Up</button>
 
-            <button id="closeBtn" type="button" class="btn" onclick="closeSignup()">Close</button>
+            <button id="signupCloseBtn" type="button" class="btn" onclick="closeSignup()">Close</button>
         </form>
     </div>
 
-    <button class="cart-button" id="cart-button" onclick='renderCart()'>Cart</button>
+    <button class="cart-button" id="cart-button">Cart</button>
 
     <div class="row" id="cartContainer">
         <div class="col-75">
@@ -100,9 +100,6 @@
                 </form>
             </div>
         </div>
-        {{!-- {{#each cartItem as |item|}}
-        <p><a href="#">{{item[0]}}</a> <span class="price">${{item[1].price}} Quantity {{item[1].number}}</span></p>
-        --}}
         <div class="col-25">
             <div class="container cartCon">
                 {{!-- THIS NEEDS TO BE INTEGRATED WITH ADD TO CART BUTTON --}}
@@ -122,6 +119,6 @@
     </div>
 
     </aside>
-
     <script src="./js/login.js"></script>
     <script src="./js/cart.js"></script>
+    <script src="./js/eventList.js"></script>

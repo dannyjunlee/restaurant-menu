@@ -22,9 +22,6 @@ function signIn() {
   loginBtn.innerHTML = "Logged In";
 }
 
-function openCart() {
-  document.getElementById("cartContainer").style.display = "block";
-}
 
 function closeCart() {
   document.getElementById("cartContainer").style.display = "none";

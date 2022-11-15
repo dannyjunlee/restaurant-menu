@@ -1,5 +1,6 @@
 const path = require('path');
 const express = require('express');
+// const helmet = require("helmet");
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -11,6 +12,7 @@ const helpers = require('./utils/helper');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
+// app.use(helmet());
 
 const sess = {
   secret: 'top secret hush hush',

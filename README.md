@@ -1,19 +1,21 @@
-<img src="assets/LucariosFullTrans.png" style="width:600px; height auto;">
+<img src="public/images/lucarioslogo.png" style="width:800px; height auto;">
 
 ## Table of contents
 *[Introduction](#introduction)  
 *[Technologies](#technologies-used)  
 *[Usage](#usage)  
-*[License](#License)  
-*[Screenshots](#Screenshots)  
-*[Deployment](#Deployment)  
-*[Future](#Future)  
-*[Credits](#Credits)  
+*[Deployment](#deployment)  
+*[Screenshots](#screenshots)  
+*[Future](#future-implementations)  
+*[Credits](#credits)  
 *[Contact](#contact)  
+*[License](#license)  
 
 ## Introduction
  
- This app is utilized to assist the user is making it easy to order food via mobile app for the resturant Lucario's. This app utilizes beneficial UI which reminds users of favorite foods or food that has been ordered more than one time
+ Lucario's web app allows users to view the restaurant's menu, log-in to store personal information such as phone number, address, credit card information, and favorited dishes. This app makes it easier to order food, pay, and leave customization notes for Lucario's via mobile or desktop. Utilizing dynamically responsive layouts and comprehensive functionality, the app provides a convenient method for restaurant-customer interactions, even on the go.
+ <br />
+ <br />
 
  ## Technologies Used
 
@@ -27,25 +29,34 @@
  [nodemon](https://www.npmjs.com/package/nodemon) |
  [Heroku](https://www.heroku.com/home) |
  [Insomnia](https://insomnia.rest/products/insomnia) |
+ [Helmet](https://www.npmjs.com/package/helmet) |
+ <br />
+ <br />
 
  ## Usage
 
- In order to use this app the use can follow the deployment link and download the app from github. Initialize the packages by opening the terminal on the package.json file and type `npm i`. The db can be initiliazed by placing in youre log-in for mysql info in a `.env` file, followed by running `mysql -u root -p` in the db terminal. After this is done the use can then start the server by running `npm run watch`. For further Usage instruction follow the deployment video below.
+ To use this application, customers simply visit the website! They can see the menu and prices, address, and phone number of Lucario's right on the homepage. By clicking on "Sign In or "Sign Up" customers can also make orders directly through the site. Being signed in also provides the customers with the ability to review dishes, add them to their favorites, and even store their personal information to make future checkout and delivery requests much more quick and easy.
+
+ For the owners of Lucario's they must open the app using their integrated terminal in a program such as VS Code. After initializing by typing `npm i` the owners can access the back-end of the application where they can alter menus, prices, hours of operation, users, and more.
+ <br />
+ <br />
 
  ## Deployment
 
- -[Github](https://github.com/dannyjunlee/restaurant-menu)  
  -[Live](https://xyz-restaurant.herokuapp.com/)  
- -[Video-Tutorial]()  
+ -[Github](https://github.com/dannyjunlee/restaurant-menu)
+ <br />
+ <br />
 
 ## Screenshots
 
-
+<img src="public/images/lucariosscreenshot.jpg" style="width:500px; height auto;">
 
 ## Future Implementations
 
-The future of this app includes but is not limited to incorporation of multiple agencies/food vendors for the best quality user feel and also simplication for choosing food based on how that person feels that day.Using our quality algorithm we would be able to add and delete certain features quite easily.
-
+The future of this app includes but is not limited to incorporation of geo-location abilities to allow customers to get up-to-date directions and eventually see how far away their delivery driver is. The application will also be able to alert customers when their orders have been received by Lucario's, when the order is done being prepared, and when the order is ready for pick-up.
+<br />
+<br />
 
 ## Credits
 
@@ -54,9 +65,35 @@ The future of this app includes but is not limited to incorporation of multiple 
 [Daniel-Keller](https://github.com/DBanfieldKeller)  
 [Kevin-Chen](https://github.com/realkevinC)  
 [Jackson-Impellizeri](https://github.com/jaxpi)
+<br />
+<br />
 
 ## Contact
-Feel Free to contact us through our github links above..
+
+Feel Free to contact us through our github links above.
+<br />
+<br />
 
 ## License
-N/A
+
+MIT License
+
+Copyright (c) 2022 group 4
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

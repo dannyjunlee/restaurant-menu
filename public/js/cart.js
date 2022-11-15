@@ -1,9 +1,4 @@
-// const clearCartButton = document.getElementById("clearCart")
-// clearCartButton.addEventListener("click", (event) => {
-//     fetch('/cart/clear') 
-//     window.location.href = '/cart'
 
-// });
 const cartCon = document.querySelector('.cartCon');
 const delBtn = document.querySelector('.delCon');
 
@@ -15,24 +10,21 @@ async function renderCart() {
         }
     });
     const cart = await response.json();
-    // console.log(cart);
     const results = Object.entries(cart);
-    // console.log(results);
     for (let i = 0; i < results.length; i++) {
         console.log(results[i], 'from loop');
-        const cartName = JSON.stringify(results[i][0]);
-        console.log(cartName);
+        const itemName = JSON.stringify(results[i][0]);
+        console.log(itemName);
         const p = document.createElement('p')
         const a = document.createElement('a')
-        // .setAttribute('href', "#");
         const span = document.createElement('span');
-        a.append(cartName);
+        a.append(itemName);
         span.textContent = results[i].price;
         p.append(a, span);
         cartCon.append(p);
-        document.getElementById("cartContainer").style.display = "block";
     }
-};
+    document.getElementById("cartContainer").style.display = "block"
+}
 
 
 // function emptyCart() {

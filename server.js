@@ -12,7 +12,7 @@ const helpers = require('./utils/helper');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
-app.use(helmet());
+// app.use(helmet());
 
 const sess = {
   secret: 'top secret hush hush',

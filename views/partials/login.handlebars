@@ -103,25 +103,29 @@
         {{!-- {{#each cartItem as |item|}}
         <p><a href="#">{{item[0]}}</a> <span class="price">${{item[1].price}} Quantity {{item[1].number}}</span></p>
         --}}
+
         <div class="col-25">
-            <div class="container cartCon">
+            <div class="cartCon">
                 {{!-- THIS NEEDS TO BE INTEGRATED WITH ADD TO CART BUTTON --}}
                 <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span>
                 </h4>
                 {{!-- {{#each cartItem as |item|}}
                 <p><a href="#">{{item[0]}}</a> <span class="price">${{item[1].price}} Quantity {{item[1].number}}</span>
                 </p> --}}
+                {{!-- {{!-- {{#each cartItem as |item|}} --}}
+
                 {{!-- <p><a href="#">Product 1</a> <span class="price">$15</span></p>
                 <p><a href="#">Product 2</a> <span class="price">$5</span></p>
                 <p><a href="#">Product 3</a> <span class="price">$8</span></p>
                 <p><a href="#">Product 4</a> <span class="price">$2</span></p>
                 <hr> --}}
                 <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+                {{!-- {{/each}} --}}
             </div>
         </div>
     </div>
 
     </aside>
-
-    <script src="./js/login.js"></script>
     <script src="./js/cart.js"></script>
+    <script src="./js/login.js"></script>
+    

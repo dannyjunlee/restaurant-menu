@@ -24,39 +24,32 @@ async function renderCart() {
         console.log(cartName);
         const p = document.createElement('p')
         const a = document.createElement('a')
-                // .setAttribute('href', "#");
+        // .setAttribute('href', "#");
         const span = document.createElement('span');
-        // for (var key in results) {
-        //     if (results.hasOwnProperty(key)) {
-        //         console.log(key + " -> " + results[key]);
-        //     }
-        // }
         a.append(cartName);
-        // a.textContent = json.stringify(results[i][0]);
         span.textContent = results[i].price;
         p.append(a, span);
         cartCon.append(p);
-
+        document.getElementById("cartContainer").style.display = "block";
     }
 };
 
-renderCart();
 
-function emptyCart() {
-    const data = { dishName }
-    fetch('/api/cart', {
-        method: 'DELETE',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-    })
-        .then((response) => response.json())
-        .then((data) => {
-            console.log('successfully deleted', data)
-        })
-        .catch((error) => {
-            console.log('Error:', error)
-        })
-    delBtn.addEventListener('click', emptyCart);
-}
+// function emptyCart() {
+//     const data = { dishName }
+//     fetch('/api/cart', {
+//         method: 'DELETE',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(data),
+//     })
+//         .then((response) => response.json())
+//         .then((data) => {
+//             console.log('successfully deleted', data)
+//         })
+//         .catch((error) => {
+//             console.log('Error:', error)
+//         })
+//     delBtn.addEventListener('click', emptyCart);
+// }

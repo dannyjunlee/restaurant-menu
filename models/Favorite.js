@@ -1,8 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection');
-const User = require('./User');
-const Dish = require('./Dish');
 
 class Favorite extends Model { }
 
@@ -21,7 +19,6 @@ Favorite.init(
                 model: 'user',
                 key: 'id',
             },
-        onDelete: 'CASCADE'
         },
         dish_id: {
             type: DataTypes.INTEGER,
@@ -29,7 +26,6 @@ Favorite.init(
                 model: 'dish',
                 key: 'id',
             },
-        onDelete: 'CASCADE'
         }
     },
     {
@@ -39,6 +35,6 @@ Favorite.init(
         underscored: true,
         modelName: 'favorite',
     }
-)
+);
 
-module.exports = Favorite
+module.exports = Favorite;

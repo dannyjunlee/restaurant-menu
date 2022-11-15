@@ -22,12 +22,17 @@ function signIn() {
   loginBtn.innerHTML = "Logged In";
 }
 
-function openCart() {
-  document.getElementById("cartContainer").style.display = "block";
-}
 
 function closeCart() {
   document.getElementById("cartContainer").style.display = "none";
+}
+
+function favorite() {
+  let heart = document.querySelector("fave");
+  if (heart.style.color = "black") {
+    heart.setAttribute("style.color", "red")
+  } else {
+  }
 }
 
 

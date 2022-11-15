@@ -3,12 +3,9 @@
 //     fetch('/cart/clear') 
 //     window.location.href = '/cart'
 
-const { Dish } = require("../../models");
-
-const { json } = require("express").Router();
-
 // });
-const cartCon = document.querySelector('.cartCon')
+const cartCon = document.querySelector('.cartCon');
+const delBtn = document.querySelector('.delCon');
 
 async function renderCart() {
     const response = await fetch('/api/cart', {
@@ -20,26 +17,39 @@ async function renderCart() {
     const cart = await response.json();
     // console.log(cart);
     const results = Object.entries(cart);
-    console.log(results);
-    for (let i = 1; i < results.length; i++) {
+    // console.log(results);
+    for (let i = 0; i < results.length; i++) {
         console.log(results[i], 'from loop');
-        console.log(results[i][0]);
+        const cartName = JSON.stringify(results[i][0]);
+        console.log(cartName);
         const p = document.createElement('p')
-        const a = document.createElement('a').setAttribute('href', "#");
+        const a = document.createElement('a')
+        // .setAttribute('href', "#");
         const span = document.createElement('span');
-        a.textContent = results[i].dishName;
-        // for (const dishName in dish_name) {
-        //     if (dish_name.hasOwnProperty(dishName)){
-        //         console.log(results[i].dishName)
-        //     }
-        // }
-
-        // a.textContent = json.stringify(results[i][0]);
+        a.append(cartName);
         span.textContent = results[i].price;
         p.append(a, span);
         cartCon.append(p);
-
+        document.getElementById("cartContainer").style.display = "block";
     }
 };
 
-renderCart();
+
+// function emptyCart() {
+//     const data = { dishName }
+//     fetch('/api/cart', {
+//         method: 'DELETE',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(data),
+//     })
+//         .then((response) => response.json())
+//         .then((data) => {
+//             console.log('successfully deleted', data)
+//         })
+//         .catch((error) => {
+//             console.log('Error:', error)
+//         })
+//     delBtn.addEventListener('click', emptyCart);
+// }

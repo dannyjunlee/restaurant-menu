@@ -3,6 +3,8 @@
 //     fetch('/cart/clear') 
 //     window.location.href = '/cart'
 
+const { Dish } = require("../../models");
+
 const { json } = require("express").Router();
 
 // });
@@ -26,6 +28,12 @@ async function renderCart() {
         const a = document.createElement('a').setAttribute('href', "#");
         const span = document.createElement('span');
         a.textContent = results[i].dishName;
+        // for (const dishName in dish_name) {
+        //     if (dish_name.hasOwnProperty(dishName)){
+        //         console.log(results[i].dishName)
+        //     }
+        // }
+
         // a.textContent = json.stringify(results[i][0]);
         span.textContent = results[i].price;
         p.append(a, span);
